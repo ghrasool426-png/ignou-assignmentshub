@@ -52,3 +52,44 @@ header{
     grid-template-columns:repeat(3,1fr);
   }
 }
+.subject-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin-top:20px;
+}
+
+.subject-card{
+  background:#ffffff;
+  border-radius:12px;
+  padding:16px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.subject-card h4{
+  margin:0;
+  color:#1e40af;
+  font-size:16px;
+}
+
+.subject-card p{
+  margin:6px 0 10px;
+  font-size:13px;
+  color:#555;
+}
+
+.subject-card a{
+  display:inline-block;
+  padding:6px 10px;
+  background:#1e40af;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  font-size:13px;
+}
+
+@media(min-width:768px){
+  .subject-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}

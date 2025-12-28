@@ -2,58 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://ghrasool426-png.github.io/ignou-assignmentshub/</loc>
-    <priority>1.00</priority>
+    <loc>https://ignouassignmentshub.com/</loc>
+    <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://ghrasool426-png.github.io/ignou-assignmentshub/ma.html</loc>
-    <priority>0.90</priority>
+    <loc>https://ignouassignmentshub.com/ma.html</loc>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ghrasool426-png.github.io/ignou-assignmentshub/ba.html</loc>
-    <priority>0.90</priority>
+    <loc>https://ignouassignmentshub.com/ba.html</loc>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ghrasool426-png.github.io/ignou-assignmentshub/bsc.html</loc>
-    <priority>0.90</priority>
+    <loc>https://ignouassignmentshub.com/bsc.html</loc>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ghrasool426-png.github.io/ignou-assignmentshub/bba.html</loc>
-    <priority>0.90</priority>
+    <loc>https://ignouassignmentshub.com/bba.html</loc>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ghrasool426-png.github.io/ignou-assignmentshub/msc.html</loc>
-    <priority>0.90</priority>
+    <loc>https://ignouassignmentshub.com/msc.html</loc>
+    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ghrasool426-png.github.io/ignou-assignmentshub/about.html</loc>
-    <priority>0.70</priority>
+    <loc>https://ignouassignmentshub.com/how-to-write-ignou-assignments.html</loc>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ghrasool426-png.github.io/ignou-assignmentshub/contact.html</loc>
-    <priority>0.70</priority>
+    <loc>https://ignouassignmentshub.com/about.html</loc>
+    <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ghrasool426-png.github.io/ignou-assignmentshub/privacy-policy.html</loc>
-    <priority>0.50</priority>
+    <loc>https://ignouassignmentshub.com/contact.html</loc>
+    <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ghrasool426-png.github.io/ignou-assignmentshub/disclaimer.html</loc>
-    <priority>0.50</priority>
+    <loc>https://ignouassignmentshub.com/privacy-policy.html</loc>
+    <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://ghrasool426-png.github.io/ignou-assignmentshub/terms-and-conditions.html</loc>
-    <priority>0.50</priority>
+    <loc>https://ignouassignmentshub.com/disclaimer.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://ignouassignmentshub.com/terms-and-conditions.html</loc>
+    <priority>0.5</priority>
   </url>
 
 </urlset>

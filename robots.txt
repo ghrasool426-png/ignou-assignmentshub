@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ghrasool426-png.github.io/ignou-assignmentshub/sitemap.xml
+Sitemap: https://ignouassignmentshub.com/sitemap.xml

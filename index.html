@@ -44,16 +44,22 @@
   </div>
 </div>
 
-<!-- ===== FOOTER LOAD (COMMON) ===== -->
+<!-- ===== COMMON FOOTER LOAD ===== -->
 <div id="footer"></div>
-
 <script>
   fetch("footer.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    });
+    .then(r => r.text())
+    .then(d => document.getElementById("footer").innerHTML = d);
 </script>
+
+<!-- ===== Sticky WhatsApp Button ===== -->
+<a
+  href="https://wa.me/919149489238?text=Hi%20I%20need%20guidance%20regarding%20IGNOU%20assignments"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp">
+  ☎
+</a>
 
 </body>
 </html>

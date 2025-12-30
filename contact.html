@@ -3,31 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact Us | IGNOU Solved Assignments</title>
-  <meta name="description" content="Contact IGNOU Solved Assignments for academic guidance and support." />
+  <meta name="description" content="Contact IGNOU Solved Assignments for academic guidance and queries.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header>
   <h1>Contact Us</h1>
+  <p>We are here to help IGNOU students</p>
 </header>
 
 <div class="container">
 
   <p>
-    For any queries, suggestions or academic guidance, feel free to contact us:
+    If you have any questions related to IGNOU assignments or academic guidance,
+    feel free to contact us using the form below.
   </p>
 
-  <p>
-    📧 Email: <strong>ghrasool426@gmail.com</strong>
+  <!-- CONTACT FORM -->
+  <form action="https://formsubmit.co/ghrasool426@gmail.com" method="POST" class="contact-form">
+
+    <!-- Security -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+
+    <label>Your Name</label>
+    <input type="text" name="name" required>
+
+    <label>Email Address</label>
+    <input type="email" name="email" required>
+
+    <label>Your Message</label>
+    <textarea name="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+
+  </form>
+
+  <p style="margin-top:20px;">
+    📧 Email: <strong>ghrasool426@gmail.com</strong><br>
+    💬 WhatsApp: <a href="https://wa.me/919149489238" target="_blank">Click Here</a>
   </p>
 
 </div>
 
+<!-- FOOTER -->
 <div id="footer"></div>
 <script>
-  fetch("footer.html").then(r=>r.text()).then(d=>footer.innerHTML=d);
+  fetch("footer.html")
+    .then(r => r.text())
+    .then(d => document.getElementById("footer").innerHTML = d);
 </script>
 
 </body>

@@ -382,11 +382,11 @@ footer{
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
 }
-/* ================= HEADER STYLE (ADSENSE SAFE) ================= */
+/* ================= HEADER STYLE (BLUE + ADSENSE SAFE) ================= */
 
 .site-header{
-  background:#ffffff;
-  border-bottom:1px solid #eaeaea;
+  background:#f5f9ff;               /* very light blue */
+  border-bottom:2px solid #0b5ed7;  /* strong blue line */
   padding:18px 0;
 }
 
@@ -404,11 +404,12 @@ footer{
 .site-header h1{
   font-size:26px;
   margin:0;
-  color:#111;
+  color:#0b5ed7;   /* MAIN BLUE */
+  font-weight:700;
 }
 
 .site-header p{
   margin:2px 0 0;
   font-size:14px;
-  color:#555;
+  color:#333;
 }

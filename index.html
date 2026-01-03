@@ -63,124 +63,44 @@
 
   <div class="program-grid">
 
-    <a href="ma.html" class="card">
-      <h3 style="color:#0b5ed7;">MA Assignments</h3>
-      <p>Master of Arts – 1st & 2nd Year</p>
-    </a>
-
-    <a href="ba.html" class="card">
-      <h3 style="color:#0b5ed7;">BA Assignments</h3>
-      <p>Bachelor of Arts</p>
-    </a>
-
-    <a href="bsc.html" class="card">
-      <h3 style="color:#0b5ed7;">BSc Assignments</h3>
-      <p>Bachelor of Science</p>
-    </a>
-
-    <a href="bba.html" class="card">
-      <h3 style="color:#0b5ed7;">BBA Assignments</h3>
-      <p>Bachelor of Business Administration</p>
-    </a>
-
-    <a href="msc.html" class="card">
-      <h3 style="color:#0b5ed7;">MSc Assignments</h3>
-      <p>Master of Science – 1st & 2nd Year</p>
-    </a>
-
-    <a href="ignou-study-material.html" class="card">
-      <h3 style="color:#0b5ed7;">IGNOU Study Material</h3>
-      <p>Books, PDFs & preparation guidance</p>
-    </a>
+    <a href="ma.html" class="card"><h3>MA Assignments</h3><p>Master of Arts</p></a>
+    <a href="ba.html" class="card"><h3>BA Assignments</h3><p>Bachelor of Arts</p></a>
+    <a href="bsc.html" class="card"><h3>BSc Assignments</h3><p>Bachelor of Science</p></a>
+    <a href="bba.html" class="card"><h3>BBA Assignments</h3><p>Business Administration</p></a>
+    <a href="msc.html" class="card"><h3>MSc Assignments</h3><p>Master of Science</p></a>
+    <a href="ignou-study-material.html" class="card"><h3>IGNOU Study Material</h3><p>Books & PDFs</p></a>
 
   </div>
+
+  <!-- 🔥 AUTO NEWS SECTION -->
+  <h2 class="section-title">Latest IGNOU News</h2>
+  <div id="news-list" class="blog-grid"></div>
 
   <!-- BLOGS -->
   <h2 class="section-title">Latest IGNOU Blogs & Updates</h2>
 
   <div class="blog-grid">
-
     <a href="apaar-id-ignou-admission-2026.html" class="blog-card">
-  <span class="badge">Admission</span>
-  <h3>APAAR ID Compulsory for IGNOU Admission 2026</h3>
-  <p>
-    APAAR ID is mandatory for IGNOU Online & ODL Admission 2026.
-    Learn what APAAR ID is, why it is required and how to create it.
-  </p>
-  <span class="read-more">Read Full Guide →</span>
+      <span class="badge">Admission</span>
+      <h3>APAAR ID Compulsory for IGNOU Admission 2026</h3>
+      <p>Why APAAR ID is mandatory and how to create it.</p>
+      <span class="read-more">Read →</span>
     </a>
 
     <a href="ignou-online-programmes-admission-january-2026.html" class="blog-card">
       <span class="badge">Admission</span>
       <h3>IGNOU Online Programmes Admission January 2026</h3>
-      <p>
-        Apply online for IGNOU Online Programmes January 2026.
-        Check eligibility, last date (31 Jan 2026), documents and full process.
-      </p>
-      <span class="read-more">Read Full Guide →</span>
+      <p>Eligibility, last date, documents & full process.</p>
+      <span class="read-more">Read →</span>
     </a>
-
-    <a href="ignou-january-admission.html" class="blog-card">
-      <span class="badge">Admission</span>
-      <h3>IGNOU January Admission Guide</h3>
-      <p>
-        Eligibility, admission process, documents required
-        and important instructions for new students.
-      </p>
-      <span class="read-more">Read More →</span>
-    </a>
-
-    <a href="ignou-assignment-result.html" class="blog-card">
-      <span class="badge">Result</span>
-      <h3>IGNOU Assignment Result – Check Marks & Status</h3>
-      <p>
-        How to check IGNOU assignment result, reasons for delay,
-        and what to do if marks are not updated.
-      </p>
-      <span class="read-more">Read Full Guide →</span>
-    </a>
-
-    <a href="ignou-msc-data-science.html" class="blog-card">
-      <span class="badge">New Course</span>
-      <h3>IGNOU Introduces MSc in Data Science & Analytics</h3>
-      <p>
-        Eligibility, fees, duration, admission process
-        and career scope explained.
-      </p>
-      <span class="read-more">Read Details →</span>
-    </a>
-
-    <a href="how-to-write-ignou-assignments.html" class="blog-card">
-      <span class="badge">Guide</span>
-      <h3>How to Write IGNOU Assignments</h3>
-      <p>
-        Step-by-step guide to write, format and submit
-        IGNOU assignments correctly.
-      </p>
-      <span class="read-more">Read Guide →</span>
-    </a>
-
-    <a href="ignou-assignment-format.html" class="blog-card">
-      <span class="badge">Format</span>
-      <h3>IGNOU Assignment Format</h3>
-      <p>
-        Front page, margins, handwriting rules
-        and structure explained.
-      </p>
-      <span class="read-more">View Format →</span>
-    </a>
-
   </div>
 
   <!-- INTERNAL LINKS -->
   <p>
     Quick links:
     <a href="blog.html">All Blogs</a> |
-    <a href="ma.html">MA</a> |
-    <a href="ba.html">BA</a> |
-    <a href="bsc.html">BSc</a> |
-    <a href="msc.html">MSc</a> |
-    <a href="about.html">About Us</a> |
+    <a href="news/">News</a> |
+    <a href="about.html">About</a> |
     <a href="contact.html">Contact</a>
   </p>
 
@@ -194,12 +114,30 @@
     .then(d => document.getElementById("footer").innerHTML = d);
 </script>
 
+<!-- 🔥 AUTO NEWS JS -->
+<script>
+fetch("/news/news-data.json")
+  .then(res => res.json())
+  .then(data => {
+    let html = "";
+    data.slice(0,4).forEach(item => {
+      html += `
+        <a href="/news/${item.url}" class="blog-card">
+          <span class="badge">${item.category}</span>
+          <h3>${item.title}</h3>
+          <p>${item.summary}</p>
+          <span class="read-more">Read →</span>
+        </a>`;
+    });
+    document.getElementById("news-list").innerHTML = html;
+  });
+</script>
+
 <!-- STICKY WHATSAPP -->
 <a href="https://wa.me/919149489238?text=Hi%20I%20need%20IGNOU%20assignment%20guidance"
    class="whatsapp-float"
    target="_blank"
-   aria-label="Chat on WhatsApp">
-   
+   aria-label="Chat on WhatsApp">🟢</a>
 
 <!-- SCHEMA -->
 <script type="application/ld+json">
@@ -208,12 +146,7 @@
   "@type": "EducationalOrganization",
   "name": "IGNOU Solved Assignments",
   "url": "https://ignouassignmentshub.com/",
-  "description": "Independent educational guidance platform for IGNOU assignments, admission updates and study material.",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "Support",
-    "email": "ghrasool426@gmail.com"
-  }
+  "description": "Independent educational guidance platform for IGNOU assignments and admission updates."
 }
 </script>
 

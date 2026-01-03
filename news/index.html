@@ -20,11 +20,10 @@
   <!-- CANONICAL -->
   <link rel="canonical" href="https://ignouassignmentshub.com/news/">
 
-  <!-- CSS (news folder ke liye correct path) -->
+  <!-- CSS -->
   <link rel="stylesheet" href="../css/style.css">
 
   <style>
-    /* WhatsApp Floating Button */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -53,27 +52,12 @@
 
 <div class="container">
 
-  <!-- NEWS ITEM 1 -->
-  <article class="news-card">
-    <h2>
-      <a href="president-murmu-inaugurates-ignou-skill-centre-odisha.html">
-        President Murmu Inaugurates IGNOU Regional Skill Centre in Odisha
-      </a>
-    </h2>
+  <!-- AUTO NEWS LIST -->
+  <div id="news-list">
+    <p>Loading latest news...</p>
+  </div>
 
-    <p class="news-meta">Published: January 2026 | Category: IGNOU News</p>
-
-    <p>
-      President Droupadi Murmu inaugurated the IGNOU Regional Skill Centre in
-      Odisha to promote skill-based education and vocational training...
-    </p>
-
-    <a href="president-murmu-inaugurates-ignou-skill-centre-odisha.html" class="read-more">
-      Read Full News →
-    </a>
-  </article>
-
-  <!-- INTERNAL LINKS SECTION -->
+  <!-- INTERNAL LINKS -->
   <section>
     <h3>Important IGNOU Links</h3>
     <ul>
@@ -94,6 +78,43 @@
   fetch("../footer.html")
     .then(res => res.text())
     .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+<!-- AUTO NEWS SCRIPT -->
+<script>
+fetch("news-data.json")
+  .then(response => response.json())
+  .then(data => {
+    let html = "";
+
+    data.forEach(item => {
+      html += `
+        <article class="news-card">
+          <h2>
+            <a href="${item.url}">
+              ${item.title}
+            </a>
+          </h2>
+
+          <p class="news-meta">
+            Published: ${item.date} | Category: ${item.category}
+          </p>
+
+          <p>${item.summary}</p>
+
+          <a href="${item.url}" class="read-more">
+            Read Full News →
+          </a>
+        </article>
+      `;
+    });
+
+    document.getElementById("news-list").innerHTML = html;
+  })
+  .catch(() => {
+    document.getElementById("news-list").innerHTML =
+      "<p>News load nahi ho rahi.</p>";
+  });
 </script>
 
 <!-- WHATSAPP FLOAT -->

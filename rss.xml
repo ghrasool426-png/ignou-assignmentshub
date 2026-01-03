@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
-<channel>
-  <title>IGNOU News &amp; Updates</title>
-  <link>https://ignouassignmentshub.com/</link>
-  <description>Latest IGNOU News, Admissions, Results &amp;Updates</description>
-  <language>en-in</language>
-</channel>
+  <channel>
+
+    <title>IGNOU News &amp; Updates</title>
+    <link>https://ignouassignmentshub.com/</link>
+    <description>Latest IGNOU News, Admissions, Results &amp; Updates</description>
+    <language>en-in</language>
+
+    <item>
+      <title>President Murmu Inaugurates IGNOU Regional Skill Centre in Odisha</title>
+      <link>https://ignouassignmentshub.com/news/president-murmu-inaugurates-ignou-skill-centre-odisha.html</link>
+      <guid>https://ignouassignmentshub.com/news/president-murmu-inaugurates-ignou-skill-centre-odisha.html</guid>
+      <pubDate>Thu, 02 Jan 2026 10:00:00 +0530</pubDate>
+      <description>
+        President Droupadi Murmu inaugurated the IGNOU Regional Skill Centre in Odisha to promote skill-based education and vocational training.
+      </description>
+    </item>
+
+  </channel>
 </rss>

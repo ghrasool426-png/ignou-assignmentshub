@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 
-  !-- SEO TITLE -->
+  <!-- SEO TITLE -->
   <title>IGNOU News & Updates | Admission, Result, New Courses</title>
 
   <!-- META DESCRIPTION -->
@@ -17,8 +17,31 @@
   <!-- RESPONSIVE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/style.css">
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://ignouassignmentshub.com/news/">
+
+  <!-- CSS (news folder ke liye correct path) -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 55px;
+      height: 55px;
+      background-color: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 28px;
+      line-height: 55px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -49,16 +72,19 @@
       Read Full News →
     </a>
   </article>
-<!-- ================= INTERNAL LINKS ================= -->
-  <h3>Important IGNOU Links</h3>
-  <ul>
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/ba.html">IGNOU BA Assignments</a></li>
-    <li><a href="/ma.html">IGNOU MA Assignments</a></li>
-    <li><a href="/bsc.html">IGNOU BSc Assignments</a></li>
-    <li><a href="/msc.html">IGNOU MSc Assignments</a></li>
-    <li><a href="/blog.html">IGNOU Blog</a></li>
-  </ul>
+
+  <!-- INTERNAL LINKS SECTION -->
+  <section>
+    <h3>Important IGNOU Links</h3>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/ba.html">IGNOU BA Assignments</a></li>
+      <li><a href="/ma.html">IGNOU MA Assignments</a></li>
+      <li><a href="/bsc.html">IGNOU BSc Assignments</a></li>
+      <li><a href="/msc.html">IGNOU MSc Assignments</a></li>
+      <li><a href="/blog.html">IGNOU Blog</a></li>
+    </ul>
+  </section>
 
 </div>
 
@@ -69,12 +95,13 @@
     .then(res => res.text())
     .then(data => document.getElementById("footer").innerHTML = data);
 </script>
-  <!-- ================= STICKY WHATSAPP ================= -->
+
+<!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/919149489238?text=Hi%20I%20need%20latest%20IGNOU%20news%20and%20guidance"
    class="whatsapp-float"
    target="_blank"
    aria-label="Chat on WhatsApp">
-   🟢
+   💬
 </a>
 
 </body>

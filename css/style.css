@@ -455,4 +455,75 @@ footer{
   height: auto;
   display: block;
   border-radius: 8px;
+  /* ===== PROGRAM CARDS IMPROVEMENT ===== */
+.card{
+  background:#ffffff;
+  border-radius:14px;
+  padding:26px 18px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.06);
+  transition:all .25s ease;
+  border:1px solid #f0f0f0;
+}
+
+.card h3{
+  color:#0a4dbf;
+  font-size:1.15rem;
+  margin-bottom:6px;
+}
+
+.card p{
+  color:#666;
+  font-size:.95rem;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 16px 35px rgba(0,0,0,0.12);
+}
+
+/* ===== BLOG / NEWS CARDS IMPROVEMENT ===== */
+.blog-card{
+  background:#fff;
+  border-radius:14px;
+  padding:18px;
+  box-shadow:0 8px 22px rgba(0,0,0,0.06);
+  transition:all .25s ease;
+  border:1px solid #f1f1f1;
+}
+
+.blog-card h3{
+  font-size:1.05rem;
+  line-height:1.4;
+  margin:10px 0;
+}
+
+.blog-card p{
+  font-size:.95rem;
+  color:#555;
+}
+
+.blog-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 14px 32px rgba(0,0,0,0.12);
+}
+
+/* ===== BADGE POLISH ===== */
+.badge{
+  display:inline-block;
+  background:#e9f1ff;
+  color:#0a4dbf;
+  font-size:.75rem;
+  padding:5px 10px;
+  border-radius:20px;
+  font-weight:600;
+}
+
+/* ===== READ MORE ===== */
+.read-more{
+  display:inline-block;
+  margin-top:10px;
+  font-weight:600;
+  color:#0a4dbf;
+  }
 }

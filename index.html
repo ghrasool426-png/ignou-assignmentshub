@@ -12,32 +12,93 @@
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8151973933673553"
     crossorigin="anonymous"></script>
 
-  <!-- SEO TITLE -->
+  <!-- SEO -->
   <title>IGNOU Solved Assignments | MA BA BSc BBA MSc Guidance</title>
-
-  <!-- META DESCRIPTION -->
-  <meta name="description"
-    content="IGNOU Solved Assignments is an independent educational guidance platform for MA, BA, BSc, BBA and MSc students. Get assignment writing guides, format, results, admission updates and study material." />
-
-  <!-- KEYWORDS -->
-  <meta name="keywords"
-    content="IGNOU solved assignments, IGNOU assignment format, IGNOU assignment result, IGNOU admission guide, IGNOU study material">
-
-  <!-- RESPONSIVE -->
+  <meta name="description" content="IGNOU Solved Assignments is an independent educational guidance platform for MA, BA, BSc, BBA and MSc students.">
+  <meta name="keywords" content="IGNOU solved assignments, IGNOU assignment format, IGNOU admission guide">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CANONICAL -->
   <link rel="canonical" href="https://ignouassignmentshub.com/" />
 
-  <!-- CSS -->
+  <!-- MAIN CSS -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- HERO HEADER CSS (ONLY ADDITION) -->
+  <!-- MENU + HERO CSS -->
   <style>
+    /* NAVBAR */
+    .navbar{
+      background:#0a3d62;
+      color:#fff;
+      padding:12px 18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+    .nav-logo{
+      font-weight:bold;
+      font-size:18px;
+    }
+    .nav-links{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+    .nav-links a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:500;
+    }
+    .dropdown{
+      position:relative;
+    }
+    .dropdown-content{
+      display:none;
+      position:absolute;
+      background:#fff;
+      min-width:180px;
+      top:28px;
+      box-shadow:0 5px 15px rgba(0,0,0,.15);
+    }
+    .dropdown-content a{
+      color:#000;
+      padding:10px;
+      display:block;
+    }
+    .dropdown:hover .dropdown-content{
+      display:block;
+    }
+
+    /* HAMBURGER */
+    .hamburger{
+      display:none;
+      font-size:24px;
+      cursor:pointer;
+    }
+    @media(max-width:768px){
+      .nav-links{
+        display:none;
+        position:absolute;
+        top:55px;
+        left:0;
+        background:#0a3d62;
+        width:100%;
+        flex-direction:column;
+        padding:15px;
+      }
+      .nav-links.show{
+        display:flex;
+      }
+      .hamburger{
+        display:block;
+      }
+    }
+
+    /* HERO */
     .hero-header{
       background:url("https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
       height:65vh;
-      position:relative;
     }
     .hero-overlay{
       background:rgba(0,51,102,0.65);
@@ -60,20 +121,47 @@
       margin-bottom:20px;
     }
     .hero-btn{
-      display:inline-block;
       background:#ffcc00;
       color:#000;
       padding:12px 22px;
       border-radius:6px;
       font-weight:bold;
       text-decoration:none;
+      display:inline-block;
     }
   </style>
 </head>
 
 <body>
 
-<!-- ✅ NEW HERO HEADER (REPLACED OLD HEADER) -->
+<!-- 🔥 NAVBAR -->
+<nav class="navbar">
+  <div class="nav-logo">IGNOU Assignments Hub</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="nav-links" id="navMenu">
+    <a href="/">Home</a>
+
+    <div class="dropdown">
+      <a href="#">Assignments ▾</a>
+      <div class="dropdown-content">
+        <a href="ma.html">MA</a>
+        <a href="ba.html">BA</a>
+        <a href="bsc.html">BSc</a>
+        <a href="bba.html">BBA</a>
+        <a href="msc.html">MSc</a>
+      </div>
+    </div>
+
+    <a href="blog.html">Blog</a>
+    <a href="news/">News</a>
+    <a href="ignou-scholarship-2026.html">Scholarship</a>
+    <a href="ignou-study-material.html">Study Material</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- 🔥 HERO HEADER -->
 <header class="hero-header">
   <div class="hero-overlay">
     <div class="hero-content">
@@ -86,7 +174,6 @@
 
 <div class="container">
 
-  <!-- INTRO -->
   <p>
     Welcome to <strong>IGNOU Solved Assignments</strong>, an independent educational
     guidance platform created to help IGNOU students understand assignment writing
@@ -100,7 +187,6 @@
     This website is <strong>not affiliated with IGNOU</strong>.
   </p>
 
-  <!-- PROGRAMS -->
   <h2 class="section-title" id="programs">IGNOU Programme-wise Assignment Guidance</h2>
 
   <div class="program-grid">
@@ -112,11 +198,9 @@
     <a href="ignou-study-material.html" class="card"><h3>IGNOU Study Material</h3><p>Books & PDFs</p></a>
   </div>
 
-  <!-- 🔥 AUTO NEWS SECTION -->
   <h2 class="section-title">Latest IGNOU News</h2>
   <div id="news-list" class="blog-grid"></div>
 
-  <!-- BLOGS -->
   <h2 class="section-title">Latest IGNOU Blogs & Updates</h2>
 
   <div class="blog-grid">
@@ -134,48 +218,24 @@
       <span class="read-more">Read →</span>
     </a>
 
-    <a href="/ignou-scholarship-2026.html" class="blog-card">
-      <span class="badge">Scholarship</span>
-      <h3>IGNOU Scholarship 2026 – Eligibility, Documents & How to Apply</h3>
-      <p>Complete guide for UG, PG, M.Phil & PhD students.</p>
-      <span class="read-more">Read Full Guide →</span>
-    </a>
-
     <a href="blog/assignment-marks-not-updated.html" class="blog-card">
       <span class="badge">Assignment</span>
       <h3>IGNOU Assignment Marks Not Updated? What To Do</h3>
-      <p>Study centre, regional centre & RTI step-by-step.</p>
-      <span class="read-more">Read Full Guide →</span>
-    </a>
-
-    <a href="/blog/ignou-re-registration-january-2026.html" class="blog-card">
-      <span class="badge">Admission</span>
-      <h3>IGNOU Re-Registration January 2026</h3>
-      <p>Last date, eligibility & online process.</p>
-      <span class="read-more">Read Full Guide →</span>
+      <p>Step-by-step solution.</p>
+      <span class="read-more">Read →</span>
     </a>
   </div>
-
-  <!-- INTERNAL LINKS -->
-  <p>
-    Quick links:
-    <a href="blog.html">All Blogs</a> |
-    <a href="news/">News</a> |
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a>
-  </p>
 
 </div>
 
 <!-- FOOTER -->
 <div id="footer"></div>
 <script>
-  fetch("footer.html")
-    .then(r => r.text())
-    .then(d => document.getElementById("footer").innerHTML = d);
+fetch("footer.html")
+  .then(r => r.text())
+  .then(d => document.getElementById("footer").innerHTML = d);
 </script>
 
-<!-- AUTO NEWS JS -->
 <script>
 fetch("/news/news-data.json")
   .then(res => res.json())
@@ -183,22 +243,25 @@ fetch("/news/news-data.json")
     let html = "";
     data.slice(0,4).forEach(item => {
       html += `
-        <a href="/news/${item.url}" class="blog-card">
-          <span class="badge">${item.category}</span>
-          <h3>${item.title}</h3>
-          <p>${item.summary}</p>
-          <span class="read-more">Read →</span>
-        </a>`;
+      <a href="/news/${item.url}" class="blog-card">
+        <span class="badge">${item.category}</span>
+        <h3>${item.title}</h3>
+        <p>${item.summary}</p>
+        <span class="read-more">Read →</span>
+      </a>`;
     });
     document.getElementById("news-list").innerHTML = html;
   });
 </script>
 
-<!-- STICKY WHATSAPP -->
 <a href="https://wa.me/919149489238?text=Hi%20I%20need%20IGNOU%20assignment%20guidance"
-   class="whatsapp-float"
-   target="_blank"
-   aria-label="Chat on WhatsApp">🟢</a>
+   class="whatsapp-float" target="_blank">🟢</a>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
 
 </body>
-  </html>
+      </html>

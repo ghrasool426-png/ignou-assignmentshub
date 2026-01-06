@@ -13,119 +13,163 @@
 
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- ✅ GOOGLE ADSENSE SCRIPT (CORRECT & FINAL) -->
+  <!-- GOOGLE ADSENSE -->
   <script async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8151973933673553"
-    crossorigin="anonymous">
-  </script>
+    crossorigin="anonymous"></script>
 
+  <!-- MENU + HERO CSS -->
+  <style>
+    .navbar{background:#0a3d62;color:#fff;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:999}
+    .nav-logo{font-weight:bold;font-size:18px}
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{color:#fff;text-decoration:none}
+    .dropdown{position:relative}
+    .dropdown-content{display:none;position:absolute;background:#fff;min-width:160px;top:28px;box-shadow:0 5px 15px rgba(0,0,0,.15)}
+    .dropdown-content a{color:#000;padding:10px;display:block}
+    .dropdown:hover .dropdown-content{display:block}
+    .hamburger{display:none;font-size:24px;cursor:pointer}
+    @media(max-width:768px){
+      .nav-links{display:none;flex-direction:column;position:absolute;top:55px;left:0;width:100%;background:#0a3d62;padding:15px}
+      .nav-links.show{display:flex}
+      .hamburger{display:block}
+    }
+    .hero-header{background:url("https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;height:50vh}
+    .hero-overlay{background:rgba(0,51,102,.65);height:100%;display:flex;align-items:center;justify-content:center}
+    .hero-content{text-align:center;color:#fff}
+    .hero-content h1{font-size:2.2rem}
+  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>IGNOU BA Solved Assignments</h1>
-  <p>Subject-wise Assignment Guidance for Bachelor of Arts</p>
+<!-- MENU -->
+<nav class="navbar">
+  <div class="nav-logo">IGNOU Assignments Hub</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="nav-links" id="navMenu">
+    <a href="/">Home</a>
+    <div class="dropdown">
+      <a href="#">Assignments ▾</a>
+      <div class="dropdown-content">
+        <a href="ma.html">MA</a>
+        <a href="ba.html">BA</a>
+        <a href="bsc.html">BSc</a>
+        <a href="bba.html">BBA</a>
+        <a href="msc.html">MSc</a>
+      </div>
+    </div>
+    <a href="blog.html">Blog</a>
+    <a href="news/">News</a>
+    <a href="ignou-scholarship-2026.html">Scholarship</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero-header">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>IGNOU BA Solved Assignments</h1>
+      <p>Subject-wise Assignment Guidance for Bachelor of Arts</p>
+    </div>
+  </div>
 </header>
 
 <div class="container">
 
-<!-- ================= INTRO ================= -->
 <p>
   This page provides <strong>IGNOU BA assignment guidance</strong> for major
   Bachelor of Arts subjects and course codes.
   All content is shared strictly for <strong>academic reference only</strong>.
-  Students must write assignments in their own words.
 </p>
 
 <p>
   This website is <strong>not affiliated with IGNOU</strong>.
-  Our aim is to help students understand assignment structure,
-  format and answer-writing approach.
 </p>
 
 <div class="internal-box">
   <p>
-    📌 Before using any guidance, read:
+    📌 Read first:
     <a href="how-to-write-ignou-assignments.html">How to Write IGNOU Assignments</a> |
     <a href="ignou-assignment-format.html">IGNOU Assignment Format</a>
   </p>
 </div>
 
-<!-- ================= MIL / AECC ================= -->
+<!-- MIL -->
 <h2>MIL / AECC Courses</h2>
 <div class="subject-grid">
-  <div class="subject-card"><h3>BAALA-135</h3><p>MIL</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BAALA-135%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BBHLA-135</h3><p>MIL</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BBHLA-135%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BHDLA-135</h3><p>MIL</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BHDLA-135%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BEGLA-135</h3><p>MIL</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BEGLA-135%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BEGLA-136</h3><p>MIL</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BEGLA-136%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BAALA-135</h3><p>MIL</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BAALA-135%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BBHLA-135</h3><p>MIL</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BBHLA-135%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BHDLA-135</h3><p>MIL</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BHDLA-135%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BEGLA-135</h3><p>MIL</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BEGLA-135%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BEGLA-136</h3><p>MIL</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BEGLA-136%20assignment%20@%209">Unlock @ ₹9</a></div>
 </div>
 
-<!-- ================= GE ================= -->
+<!-- GE -->
 <h2>Generic Elective (GE)</h2>
 <div class="subject-grid">
-  <div class="subject-card"><h3>BPCS-183</h3><p>Political Science</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPCS-183%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BPCS-184</h3><p>Political Science</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPCS-184%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BHIS-183</h3><p>History</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BHIS-183%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BECS-184</h3><p>Economics</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BECS-184%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BSOS-184</h3><p>Sociology</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BSOS-184%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BPCS-183</h3><p>Political Science</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPCS-183%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BPCS-184</h3><p>Political Science</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPCS-184%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BHIS-183</h3><p>History</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BHIS-183%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BECS-184</h3><p>Economics</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BECS-184%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BSOS-184</h3><p>Sociology</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BSOS-184%20assignment%20@%209">Unlock @ ₹9</a></div>
 </div>
 
-<!-- ================= CORE ================= -->
+<!-- CORE -->
 <h2>Core Courses (BAG)</h2>
 <div class="subject-grid">
-  <div class="subject-card"><h3>BANC-131</h3><p>Anthropology</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BANC-131%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BHIC-131</h3><p>History</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BHIC-131%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BPSC-131</h3><p>Political Science</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPSC-131%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BANC-131</h3><p>Anthropology</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BANC-131%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BHIC-131</h3><p>History</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BHIC-131%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BPSC-131</h3><p>Political Science</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPSC-131%20assignment%20@%209">Unlock @ ₹9</a></div>
 </div>
 
-<!-- ================= DSC ================= -->
+<!-- DSC -->
 <h2>Discipline Specific Courses (DSC)</h2>
 <div class="subject-grid">
-  <div class="subject-card"><h3>BANE-141</h3><p>Anthropology</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BANE-141%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BHIE-141</h3><p>History</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BHIE-141%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BPSE-141</h3><p>Political Science</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPSE-141%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BECE-141</h3><p>Economics</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BECE-141%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BSOE-141</h3><p>Sociology</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BSOE-141%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BANE-141</h3><p>Anthropology</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BANE-141%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BHIE-141</h3><p>History</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BHIE-141%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BPSE-141</h3><p>Political Science</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPSE-141%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BECE-141</h3><p>Economics</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BECE-141%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BSOE-141</h3><p>Sociology</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BSOE-141%20assignment%20@%209">Unlock @ ₹9</a></div>
 </div>
 
-<!-- ================= HONOURS ================= -->
+<!-- HONOURS -->
 <h2>Honours Courses</h2>
 
 <h3>Psychology</h3>
 <div class="subject-grid">
-  <div class="subject-card"><h3>BPCC-101</h3><p>Psychology Honours</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPCC-101%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BPCC-102</h3><p>Psychology Honours</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPCC-102%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BPCC-101</h3><p>Psychology</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPCC-101%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BPCC-102</h3><p>Psychology</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPCC-102%20assignment%20@%209">Unlock @ ₹9</a></div>
 </div>
 
 <h3>Public Administration</h3>
 <div class="subject-grid">
-  <div class="subject-card"><h3>BPAC-101</h3><p>Public Administration Honours</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPAC-101%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BPAC-102</h3><p>Public Administration Honours</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPAC-102%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BPAC-101</h3><p>Public Administration</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPAC-101%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BPAC-102</h3><p>Public Administration</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPAC-102%20assignment%20@%209">Unlock @ ₹9</a></div>
 </div>
 
 <h3>Urdu</h3>
 <div class="subject-grid">
-  <div class="subject-card"><h3>BUDC-101</h3><p>Urdu Honours</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BUDC-101%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BUDC-102</h3><p>Urdu Honours</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BUDC-102%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BUDC-101</h3><p>Urdu</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BUDC-101%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BUDC-102</h3><p>Urdu</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BUDC-102%20assignment%20@%209">Unlock @ ₹9</a></div>
 </div>
 
 <h3>Education & Philosophy</h3>
 <div class="subject-grid">
-  <div class="subject-card"><h3>BESC-131</h3><p>Education</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BESC-131%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
-  <div class="subject-card"><h3>BPYE-141</h3><p>Philosophy</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPYE-141%20assignment%20@%209" target="_blank">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BESC-131</h3><p>Education</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BESC-131%20assignment%20@%209">Unlock @ ₹9</a></div>
+  <div class="subject-card"><h3>BPYE-141</h3><p>Philosophy</p><a class="unlock-btn" href="https://wa.me/919149489238?text=Hi%20I%20want%20IGNOU%20BPYE-141%20assignment%20@%209">Unlock @ ₹9</a></div>
 </div>
 
-<!-- ================= FAQ ================= -->
-<h2 class="faq-title">FAQs – IGNOU BA Assignments</h2>
-<div class="faq-box"><h3>Are these assignments official?</h3><p>No. This site is not affiliated with IGNOU.</p></div>
-<div class="faq-box"><h3>Can I submit directly?</h3><p>No. Always write in your own words.</p></div>
-<div class="faq-box"><h3>Assignment price?</h3><p>₹9 per subject via WhatsApp.</p></div>
-<div class="faq-box"><h3>How will I receive it?</h3><p>Guidance is shared on WhatsApp.</p></div>
+<!-- FAQ -->
+<h2>FAQs – IGNOU BA Assignments</h2>
+<p><strong>Are these official?</strong> No</p>
+<p><strong>Price?</strong> ₹9 per subject</p>
+<p><strong>Delivery?</strong> WhatsApp</p>
 
 <p>
-  🔗 <a href="blog.html">IGNOU Blog</a> |
+  🔗 <a href="blog.html">Blog</a> |
   <a href="ma.html">MA</a> |
   <a href="bsc.html">BSc</a> |
   <a href="bba.html">BBA</a> |
@@ -139,17 +183,13 @@
 <div id="footer"></div>
 <script>
 fetch("footer.html").then(r=>r.text()).then(d=>document.getElementById("footer").innerHTML=d);
+function toggleMenu(){document.getElementById("navMenu").classList.toggle("show")}
 </script>
 
-<!-- ✅ STICKY WHATSAPP BUTTON (SINGLE & OFFICIAL) -->
-<a href="https://wa.me/919149489238?text=Hi%20I%20need%20IGNOU%20BA%20assignment%20guidance"
-   class="whatsapp-float"
-   target="_blank"
-   aria-label="Chat on WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-       alt="WhatsApp Chat"
-       width="55">
+<!-- WHATSAPP -->
+<a href="https://wa.me/919149489238" class="whatsapp-float" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="55">
 </a>
 
 </body>
-                                                                       </html>
+  </html>

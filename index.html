@@ -22,62 +22,75 @@
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- NAV + HERO + WHATSAPP CSS -->
   <style>
-    /* FEATURED CARDS */
-    .feature-section{
-      margin:50px 0;
-    }
-    .feature-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:20px;
-    }
-    .feature-card{
-      background:#fff;
-      border-radius:14px;
-      padding:22px;
-      box-shadow:0 8px 25px rgba(0,0,0,.08);
-      transition:.3s;
-      position:relative;
-    }
-    .feature-card:hover{
-      transform:translateY(-5px);
-    }
-    .feature-badge{
-      display:inline-block;
+    .navbar{
       background:#0a3d62;
       color:#fff;
-      font-size:12px;
-      padding:5px 10px;
-      border-radius:20px;
-      margin-bottom:12px;
+      padding:12px 18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:999;
     }
-    .feature-card h3{
-      margin:10px 0;
-      font-size:20px;
-      color:#0a3d62;
+    .nav-logo{font-weight:bold;font-size:18px;}
+    .nav-links{display:flex;gap:18px;align-items:center;}
+    .nav-links a{color:#fff;text-decoration:none;}
+    .dropdown{position:relative;}
+    .dropdown-content{
+      display:none;position:absolute;background:#fff;top:28px;
+      min-width:160px;box-shadow:0 5px 15px rgba(0,0,0,.15);
     }
-    .feature-card p{
-      color:#444;
-      font-size:14px;
-      line-height:1.6;
+    .dropdown-content a{color:#000;padding:10px;display:block;}
+    .dropdown:hover .dropdown-content{display:block;}
+
+    .hamburger{display:none;font-size:24px;cursor:pointer;}
+    @media(max-width:768px){
+      .nav-links{
+        display:none;position:absolute;top:55px;left:0;
+        background:#0a3d62;width:100%;flex-direction:column;padding:15px;
+      }
+      .nav-links.show{display:flex;}
+      .hamburger{display:block;}
     }
-    .feature-btn{
-      margin-top:15px;
-      display:inline-block;
-      color:#fff;
+
+    .hero-header{
+      background:url("https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      height:65vh;
+    }
+    .hero-overlay{
+      background:rgba(0,51,102,0.65);
+      height:100%;display:flex;align-items:center;justify-content:center;
+    }
+    .hero-content{text-align:center;color:#fff;padding:20px;}
+    .hero-content h1{font-size:2.4rem;margin-bottom:10px;}
+    .hero-btn{
+      background:#ffcc00;color:#000;padding:12px 22px;
+      border-radius:6px;font-weight:bold;text-decoration:none;
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      width:55px;
+      height:55px;
       background:#25D366;
-      padding:10px 18px;
-      border-radius:6px;
-      text-decoration:none;
-      font-weight:600;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 4px 10px rgba(0,0,0,.3);
+      z-index:1000;
     }
+    .whatsapp-float img{width:30px;height:30px;}
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-logo">IGNOU Assignments Hub</div>
   <div class="hamburger" onclick="toggleMenu()">☰</div>
@@ -102,7 +115,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <header class="hero-header">
   <div class="hero-overlay">
     <div class="hero-content">
@@ -124,48 +136,21 @@
     <a href="bba.html" class="card"><h3>BBA</h3><p>Business Administration</p></a>
     <a href="msc.html" class="card"><h3>MSc</h3><p>Master of Science</p></a>
     <a href="ignou-study-material.html" class="card"><h3>Study Material</h3></a>
+
+    <!-- ✅ ONLY TWO NEW CARDS -->
+    <a href="blog.html" class="card">
+      <h3>IGNOU Blog</h3>
+      <p>Guides, Formats & Student Help</p>
+    </a>
+
+    <a href="news/" class="card">
+      <h3>Latest Updates</h3>
+      <p>News, Results & Notifications</p>
+    </a>
   </div>
-
-  <!-- ✅ NEW FEATURE SECTION -->
-  <section class="feature-section">
-    <h2>Featured Guide & Latest Update</h2>
-
-    <div class="feature-grid">
-
-      <!-- BLOG CARD -->
-      <div class="feature-card">
-        <span class="feature-badge">📘 Featured Guide</span>
-        <h3>How to Write IGNOU Assignments (Step-by-Step)</h3>
-        <p>
-          Complete IGNOU assignment writing guide covering format,
-          word limit, presentation tips and common mistakes
-          to score better marks.
-        </p>
-        <a href="how-to-write-ignou-assignments.html" class="feature-btn">
-          Read Full Guide →
-        </a>
-      </div>
-
-      <!-- NEWS CARD -->
-      <div class="feature-card">
-        <span class="feature-badge">📰 Latest Update</span>
-        <h3>IGNOU Assignment Marks Not Updated?</h3>
-        <p>
-          If your assignment status is showing
-          “Received” or “Under Process”, follow this
-          official step-by-step solution.
-        </p>
-        <a href="blog/assignment-marks-not-updated.html" class="feature-btn">
-          Check Update →
-        </a>
-      </div>
-
-    </div>
-  </section>
 
 </div>
 
-<!-- FOOTER -->
 <div id="footer"></div>
 <script>
 fetch("footer.html")
@@ -173,13 +158,11 @@ fetch("footer.html")
   .then(d=>document.getElementById("footer").innerHTML=d);
 </script>
 
-<!-- WHATSAPP -->
 <a href="https://wa.me/919149489238?text=Hi%20I%20need%20IGNOU%20assignment%20guidance"
    class="whatsapp-float"
    target="_blank"
    aria-label="Chat on WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-       alt="WhatsApp Chat">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
 <script>

@@ -20,16 +20,72 @@
 
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- BLOG HERO CSS -->
+  <style>
+    .blog-hero{
+      background:url("https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+      height:50vh;
+      position:relative;
+    }
+    .blog-hero-overlay{
+      background:rgba(0,0,0,0.65);
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+    .blog-hero-content{
+      max-width:900px;
+      padding:20px;
+      color:#fff;
+    }
+    .blog-hero-content h1{
+      font-size:2.2rem;
+      line-height:1.3;
+      margin-bottom:12px;
+    }
+    .blog-hero-content p{
+      font-size:1.1rem;
+      color:#eaeaea;
+    }
+    .blog-tag{
+      display:inline-block;
+      background:#ffcc00;
+      color:#000;
+      font-weight:600;
+      padding:6px 12px;
+      border-radius:4px;
+      margin-bottom:12px;
+    }
+    @media(max-width:768px){
+      .blog-hero{height:42vh;}
+      .blog-hero-content h1{font-size:1.6rem;}
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- ⚠️ COMMON HEADER / MENU COMES FROM YOUR EXISTING SYSTEM -->
+<!-- ✅ COMMON HEADER / MENU AUTO LOADS FROM SITE -->
+
+<!-- 🔥 BLOG HERO HEADER -->
+<header class="blog-hero">
+  <div class="blog-hero-overlay">
+    <div class="blog-hero-content">
+      <span class="blog-tag">IGNOU Student Issue</span>
+      <h1>Thousands of IGNOU Students Are Facing This Problem Right Now</h1>
+      <p>
+        Assignment marks not updated even after submission?
+        Check if you are one of them and learn the exact solution.
+      </p>
+    </div>
+  </div>
+</header>
 
 <div class="container blog-content">
-
-  <!-- ================= H1 ================= -->
-  <h1>Thousands of IGNOU Students Are Facing This Problem Right Now – Check If You Are One of Them</h1>
 
   <p>
     Every year, thousands of students enrolled in
@@ -44,13 +100,11 @@
     <strong>why this happens and what you should do step by step</strong>.
   </p>
 
-  <!-- ================= INTERNAL LINK ================= -->
   <p class="internal-box">
     📌 New student? First read:
     <a href="../how-to-write-ignou-assignments.html">How to Write IGNOU Assignments Correctly</a>
   </p>
 
-  <!-- ================= SECTION ================= -->
   <h2>What Is This IGNOU Assignment Problem?</h2>
 
   <p>
@@ -65,11 +119,6 @@
     <li>Grade card not updated</li>
   </ul>
 
-  <p>
-    This situation creates panic, especially when exams or results are near.
-  </p>
-
-  <!-- ================= SECTION ================= -->
   <h2>Why Are IGNOU Assignment Marks Not Updated?</h2>
 
   <h3>1. Delay at IGNOU Study Centre Level</h3>
@@ -96,72 +145,45 @@
     causing temporary delays.
   </p>
 
-  <!-- ================= SECTION ================= -->
   <h2>If Your Assignment Status Shows “Received” or “Under Process”</h2>
 
   <blockquote>
-    ✅ Your assignment is safe  
-    ✅ It is under evaluation  
+    ✅ Your assignment is safe<br>
+    ✅ It is under evaluation<br>
     ❌ No need to panic immediately
   </blockquote>
 
-  <p>
-    IGNOU updates marks in phases, not all at once.
-  </p>
-
-  <!-- ================= SECTION ================= -->
   <h2>Step-by-Step Solution to Get IGNOU Assignment Marks Updated</h2>
 
   <h3>Step 1: Check Assignment Status Carefully</h3>
   <p>
     Always check status from the official IGNOU website.
-    Make sure your details are correct.
   </p>
 
   <h3>Step 2: Wait for Normal Evaluation Time</h3>
   <p>
-    Normally, marks are updated within <strong>30–60 days</strong> after submission.
+    Normally, marks are updated within <strong>30–60 days</strong>.
   </p>
 
   <h3>Step 3: Contact Your Study Centre</h3>
   <p>
     Visit your study centre with your assignment submission receipt.
-    This receipt is very important.
   </p>
 
   <h3>Step 4: Contact Regional Centre</h3>
   <p>
-    If study centre does not respond, email your regional centre
-    with enrollment number, course code and receipt copy.
+    Email your regional centre with enrollment number and receipt copy.
   </p>
 
-  <h3>Step 5: Written Complaint</h3>
-  <p>
-    Submit a written application at the regional centre if required.
-  </p>
-
-  <h3>Step 6: RTI (Last Option)</h3>
+  <h3>Step 5: RTI (Last Option)</h3>
   <p>
     RTI should be filed only if all other options fail.
   </p>
 
-  <!-- ================= FAQ ================= -->
-  <h2>Frequently Asked Questions</h2>
-
-  <h3>How long does IGNOU take to update assignment marks?</h3>
-  <p>Usually 1–2 months, sometimes longer.</p>
-
-  <h3>Can result be declared without assignment marks?</h3>
-  <p>No. Assignment marks are mandatory.</p>
-
-  <h3>Do I need to resubmit assignments?</h3>
-  <p>No, unless IGNOU officially asks you.</p>
-
-  <!-- ================= INTERNAL LINKS ================= -->
   <h2>Related IGNOU Guides</h2>
 
   <ul>
-    <li><a href="../blog.html">IGNOU Blog & Student Help Guides</a></li>
+    <li><a href="../blog.html">IGNOU Blog & Student Help</a></li>
     <li><a href="../ma.html">MA Assignment Guidance</a></li>
     <li><a href="../ba.html">BA Assignment Guidance</a></li>
     <li><a href="../bsc.html">BSc Assignment Guidance</a></li>
@@ -169,15 +191,10 @@
     <li><a href="../msc.html">MSc Assignment Guidance</a></li>
   </ul>
 
-  <!-- ================= CONCLUSION ================= -->
   <h2>Conclusion</h2>
 
   <p>
-    Thousands of IGNOU students face assignment marks delay every year.
-    While it is frustrating, most cases are resolved automatically.
-  </p>
-
-  <p>
+    Thousands of IGNOU students face this issue every year.
     Stay calm, keep your receipt safe and follow the correct process.
     Your marks will be updated.
   </p>
@@ -197,4 +214,4 @@ fetch("../footer.html")
 </script>
 
 </body>
-  </html>
+</html>

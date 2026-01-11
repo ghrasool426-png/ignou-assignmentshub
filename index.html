@@ -17,12 +17,14 @@
   <meta name="description" content="IGNOU Solved Assignments – MA, BA, BSc, BBA, MSc assignment guidance, admission updates, results & study material.">
   <meta name="keywords" content="IGNOU solved assignments, IGNOU assignment format, IGNOU admission guide">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a3d62">
   <link rel="canonical" href="https://ignouassignmentshub.com/" />
 
-  <!-- MAIN CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- MAIN CSS (performance optimized) -->
+  <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 
-  <!-- NAV + HERO + WHATSAPP CSS -->
+  <!-- NAV + HERO + WHATSAPP CSS (unchanged design) -->
   <style>
     .navbar{
       background:#0a3d62;
@@ -60,6 +62,12 @@
       background:url("https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
       height:65vh;
     }
+    @media(max-width:768px){
+      .hero-header{
+        background:url("https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=800&q=60") center/cover no-repeat;
+      }
+    }
+
     .hero-overlay{
       background:rgba(0,51,102,0.65);
       height:100%;display:flex;align-items:center;justify-content:center;
@@ -126,7 +134,6 @@
 </header>
 
 <div class="container">
-
   <h2 id="programs">IGNOU Programme-wise Assignment Guidance</h2>
 
   <div class="program-grid">
@@ -136,33 +143,30 @@
     <a href="bba.html" class="card"><h3>BBA</h3><p>Business Administration</p></a>
     <a href="msc.html" class="card"><h3>MSc</h3><p>Master of Science</p></a>
     <a href="ignou-study-material.html" class="card"><h3>Study Material</h3></a>
-
-    <!-- ✅ ONLY TWO NEW CARDS -->
-    <a href="blog.html" class="card">
-      <h3>IGNOU Blog</h3>
-      <p>Guides, Formats & Student Help</p>
-    </a>
-
-    <a href="news/" class="card">
-      <h3>Latest Updates</h3>
-      <p>News, Results & Notifications</p>
-    </a>
+    <a href="blog.html" class="card"><h3>IGNOU Blog</h3><p>Guides & Student Help</p></a>
+    <a href="news/" class="card"><h3>Latest Updates</h3><p>News & Notifications</p></a>
   </div>
-
 </div>
 
 <div id="footer"></div>
-<script>
-fetch("footer.html")
-  .then(r=>r.text())
-  .then(d=>document.getElementById("footer").innerHTML=d);
+
+<script defer>
+window.addEventListener("load",()=>{
+  fetch("footer.html")
+    .then(r=>r.text())
+    .then(d=>document.getElementById("footer").innerHTML=d);
+});
 </script>
 
 <a href="https://wa.me/919149489238?text=Hi%20I%20need%20IGNOU%20assignment%20guidance"
    class="whatsapp-float"
    target="_blank"
    aria-label="Chat on WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+       alt="WhatsApp"
+       loading="lazy"
+       width="30"
+       height="30">
 </a>
 
 <script>

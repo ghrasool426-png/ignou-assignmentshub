@@ -11,42 +11,62 @@
       "title": "IGNOU Puts Psychology Programmes on Hold for January 2026 Admission",
       "description": "IGNOU has officially put MA Psychology, BA Psychology and PG Diploma in Mental Health on hold for the January 2026 admission cycle. Fees will be refunded to applicants.",
       "content_url": "https://ignouassignmentshub.com/ignou-psychology-programmes-on-hold-january-2026.html",
-      "image_url": "https://ignouassignmentshub.com/images/ignou-psychology-on-hold-2026.jpg",
       "author": "IGNOU Assignments Hub",
-      "publisher": "IGNOU Assignments Hub",
-      "published_at": "2026-01-15T08:00:00+05:30",
-      "updated_at": "2026-01-15T08:00:00+05:30",
+      "published_at": "2026-01-15",
       "category": "Education",
       "keywords": [
         "IGNOU",
-        "IGNOU Psychology",
-        "IGNOU January 2026 Admission",
-        "MA Psychology IGNOU",
-        "BA Psychology IGNOU",
+        "Psychology",
+        "January 2026 Admission",
         "IGNOU Refund"
+      ]
+    },
+    {
+      "id": "president-murmu-ignou-skill-centre-odisha",
+      "title": "President Murmu Inaugurates IGNOU Regional Skill Centre in Odisha",
+      "description": "President Droupadi Murmu inaugurated a new IGNOU Regional Skill Centre in Odisha to promote skill-based education.",
+      "content_url": "https://ignouassignmentshub.com/president-murmu-inaugurates-ignou-skill-centre-odisha.html",
+      "image_url": "https://ignouassignmentshub.com/images/ignou-skill-centre-odisha.jpg",
+      "author": "IGNOU Assignments Hub",
+      "published_at": "2026-01-02",
+      "category": "IGNOU News",
+      "keywords": [
+        "IGNOU",
+        "President Murmu",
+        "Skill Centre",
+        "Odisha"
+      ]
+    },
+    {
+      "id": "ignou-new-skill-courses-2026",
+      "title": "IGNOU Launches New Skill Courses 2026",
+      "description": "IGNOU announced new job-oriented skill courses for the 2026 admission cycle.",
+      "content_url": "https://ignouassignmentshub.com/ignou-new-skill-courses-2026.html",
+      "image_url": "https://ignouassignmentshub.com/images/ignou-skill-courses-2026.jpg",
+      "author": "IGNOU Assignments Hub",
+      "published_at": "2026-02-01",
+      "category": "IGNOU Update",
+      "keywords": [
+        "IGNOU",
+        "Skill Courses",
+        "Admission 2026"
+      ]
+    },
+    {
+      "id": "ignou-job-fair-2026",
+      "title": "IGNOU Job Fair 2026: Big Opportunity for IGNOU Students",
+      "description": "IGNOU has announced Job Fair / Placement Drive 2026 for UG & PG students.",
+      "content_url": "https://ignouassignmentshub.com/ignou-job-fair-2026.html",
+      "image_url": "https://ignouassignmentshub.com/images/ignou-job-fair-2026.jpg",
+      "author": "IGNOU Assignments Hub",
+      "published_at": "2026-01-10",
+      "category": "Job Fair",
+      "keywords": [
+        "IGNOU",
+        "Job Fair",
+        "Placement",
+        "IGNOU Students"
       ]
     }
   ]
-}[
-  {
-    "title": "President Murmu Inaugurates IGNOU Regional Skill Centre in Odisha",
-    "url": "president-murmu-inaugurates-ignou-skill-centre-odisha.html",
-    "date": "2026-01-02",
-    "category": "IGNOU News",
-    "summary": "President Droupadi Murmu inaugurated a new IGNOU Regional Skill Centre in Odisha to promote skill-based education."
-  },
-  {
-    "title": "IGNOU Launches New Skill Courses 2026",
-    "url": "ignou-new-skill-courses-2026.html",
-    "date": "2026-02-01",
-    "category": "IGNOU Update",
-    "summary": "IGNOU announced new job-oriented skill courses for the 2026 admission cycle."
-  },
-  {
-    "title": "IGNOU Job Fair 2026: Big Opportunity for IGNOU Students",
-    "url": "ignou-job-fair-2026.html",
-    "date": "2026-01-10",
-    "category": "Job Fair",
-    "summary": "IGNOU has announced Job Fair / Placement Drive 2026 for UG & PG students. Check eligibility, registration process, required documents and instructions."
-  }
-]
+}

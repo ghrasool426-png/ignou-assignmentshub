@@ -1,4 +1,33 @@
-[
+{
+  "version": "1.0",
+  "source": {
+    "name": "IGNOU Assignments Hub",
+    "url": "https://ignouassignmentshub.com"
+  },
+  "language": "en",
+  "articles": [
+    {
+      "id": "ignou-psychology-on-hold-jan-2026",
+      "title": "IGNOU Puts Psychology Programmes on Hold for January 2026 Admission",
+      "description": "IGNOU has officially put MA Psychology, BA Psychology and PG Diploma in Mental Health on hold for the January 2026 admission cycle. Fees will be refunded to applicants.",
+      "content_url": "https://ignouassignmentshub.com/ignou-psychology-programmes-on-hold-january-2026.html",
+      "image_url": "https://ignouassignmentshub.com/images/ignou-psychology-on-hold-2026.jpg",
+      "author": "IGNOU Assignments Hub",
+      "publisher": "IGNOU Assignments Hub",
+      "published_at": "2026-01-15T08:00:00+05:30",
+      "updated_at": "2026-01-15T08:00:00+05:30",
+      "category": "Education",
+      "keywords": [
+        "IGNOU",
+        "IGNOU Psychology",
+        "IGNOU January 2026 Admission",
+        "MA Psychology IGNOU",
+        "BA Psychology IGNOU",
+        "IGNOU Refund"
+      ]
+    }
+  ]
+}[
   {
     "title": "President Murmu Inaugurates IGNOU Regional Skill Centre in Odisha",
     "url": "president-murmu-inaugurates-ignou-skill-centre-odisha.html",

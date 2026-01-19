@@ -1,42 +1,47 @@
 [
   {
+    "id": 1,
     "hero": true,
-    "title": "IGNOU Extends Re-Registration Deadline for January 2026 Session Till 31 January",
-    "description": "IGNOU has extended the re-registration deadline for all ODL and Online programmes for the January 2026 session till 31 January 2026.",
-    "url": "ignou-re-registration-deadline-extended-january-2026.html",
+    "title": "IGNOU Extends Re-Registration Deadline for January 2026 Session",
+    "description": "IGNOU has officially extended the re-registration deadline for all ODL and Online programmes for the January 2026 session until 31 January 2026.",
+    "url": "/news/ignou-re-registration-deadline-extended-january-2026.html",
     "date": "2026-01-18",
     "category": "IGNOU Update"
   },
   {
+    "id": 2,
     "hero": false,
     "title": "IGNOU Puts Psychology Programmes on Hold for January 2026 Admission",
-    "description": "IGNOU has officially put MA Psychology, BA Psychology and PG Diploma in Mental Health on hold for the January 2026 admission cycle.",
-    "url": "ignou-psychology-programmes-on-hold-january-2026.html",
+    "description": "IGNOU has put MA Psychology, BA Psychology and PG Diploma in Mental Health programmes on hold for the January 2026 admission cycle.",
+    "url": "/news/ignou-psychology-programmes-on-hold-january-2026.html",
     "date": "2026-01-15",
-    "category": "Education"
+    "category": "Education Update"
   },
   {
+    "id": 3,
     "hero": false,
-    "title": "President Murmu Inaugurates IGNOU Regional Skill Centre in Odisha",
-    "description": "President Droupadi Murmu inaugurated a new IGNOU Regional Skill Centre in Odisha to promote skill-based education.",
-    "url": "president-murmu-inaugurates-ignou-skill-centre-odisha.html",
+    "title": "President Droupadi Murmu Inaugurates IGNOU Regional Skill Centre in Odisha",
+    "description": "The President of India inaugurated a new IGNOU Regional Skill Centre in Odisha to strengthen skill-based and vocational education.",
+    "url": "/news/president-murmu-inaugurates-ignou-skill-centre-odisha.html",
     "date": "2026-01-02",
     "category": "IGNOU News"
   },
   {
+    "id": 4,
     "hero": false,
-    "title": "IGNOU Launches New Skill Courses 2026",
-    "description": "IGNOU announced new job-oriented skill courses for the 2026 admission cycle.",
-    "url": "ignou-new-skill-courses-2026.html",
+    "title": "IGNOU Launches New Skill-Based Courses for 2026 Admissions",
+    "description": "IGNOU has announced several new job-oriented and skill-based courses for students enrolling in the 2026 academic cycle.",
+    "url": "/news/ignou-new-skill-courses-2026.html",
     "date": "2026-02-01",
     "category": "IGNOU Update"
   },
   {
+    "id": 5,
     "hero": false,
-    "title": "IGNOU Job Fair 2026: Big Opportunity for IGNOU Students",
-    "description": "IGNOU announced Job Fair / Placement Drive 2026 for UG & PG students.",
-    "url": "ignou-job-fair-2026.html",
+    "title": "IGNOU Announces Job Fair and Placement Drive 2026",
+    "description": "IGNOU will organise a Job Fair and Placement Drive in 2026 to support employment opportunities for UG and PG students.",
+    "url": "/news/ignou-job-fair-2026.html",
     "date": "2026-01-10",
-    "category": "Job Fair"
+    "category": "Career Update"
   }
 ]

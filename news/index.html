@@ -3,42 +3,50 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- SEO TITLE -->
-  <title>IGNOU News & Updates | Admission, Result, New Courses</title>
+  <!-- SEO -->
+  <title>IGNOU Latest News & Updates | Admissions, Results, Courses</title>
 
-  <!-- META DESCRIPTION -->
   <meta name="description"
-        content="Latest IGNOU news and updates including admission notifications, assignment results, new courses, datesheet and official announcements.">
+        content="Get the latest IGNOU news and updates including admissions, re-registration, exams, results, new courses and official announcements.">
 
-  <!-- KEYWORDS -->
   <meta name="keywords"
-        content="IGNOU News, IGNOU Admission, IGNOU Online Programme, IGNOU Assignment Result, IGNOU New Course, IGNOU Updates">
+        content="IGNOU News, IGNOU Latest Updates, IGNOU Admission News, IGNOU Re Registration, IGNOU New Courses">
 
-  <!-- RESPONSIVE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CANONICAL -->
   <link rel="canonical" href="https://ignouassignmentshub.com/news/">
 
-  <!-- CSS -->
+  <!-- MAIN CSS -->
   <link rel="stylesheet" href="../css/style.css">
 
+  <!-- HERO + NEWS CSS -->
   <style>
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 55px;
-      height: 55px;
-      background-color: #25D366;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 28px;
-      line-height: 55px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      z-index: 1000;
-      text-decoration: none;
+    header{
+      margin-bottom:20px;
+    }
+
+    .hero-news{
+      background:#f4f6fb;
+      padding:20px;
+      border-left:6px solid #5a2ca0;
+      margin-bottom:30px;
+    }
+
+    .hero-news img{
+      width:100%;
+      border-radius:8px;
+      margin-bottom:12px;
+    }
+
+    .hero-news h2{
+      font-size:1.6rem;
+      margin-bottom:8px;
+    }
+
+    .news-card{
+      padding-bottom:20px;
+      margin-bottom:30px;
+      border-bottom:1px solid #ddd;
     }
 
     .news-card img{
@@ -46,19 +54,49 @@
       border-radius:8px;
       margin-bottom:10px;
     }
+
+    .news-meta{
+      font-size:0.9rem;
+      color:#666;
+      margin-bottom:8px;
+    }
+
+    .read-more{
+      font-weight:600;
+      text-decoration:none;
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      width:55px;
+      height:55px;
+      background:#25D366;
+      color:#fff;
+      border-radius:50%;
+      text-align:center;
+      line-height:55px;
+      font-size:26px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
+      z-index:1000;
+    }
   </style>
 </head>
 
 <body>
 
-<header>
+<header class="container">
   <h1>IGNOU Latest News & Updates</h1>
-  <p>Official IGNOU announcements, exams, admissions & skill updates</p>
+  <p>Official IGNOU announcements, admissions, exams & skill updates</p>
 </header>
 
 <div class="container">
 
-  <!-- AUTO NEWS LIST -->
+  <!-- HERO NEWS -->
+  <div id="hero-news"></div>
+
+  <!-- NEWS LIST -->
   <div id="news-list">
     <p>Loading latest news...</p>
   </div>
@@ -68,10 +106,10 @@
     <h3>Important IGNOU Links</h3>
     <ul>
       <li><a href="/">Home</a></li>
-      <li><a href="/ba.html">IGNOU BA Assignments</a></li>
       <li><a href="/ma.html">IGNOU MA Assignments</a></li>
+      <li><a href="/ba.html">IGNOU BA Assignments</a></li>
       <li><a href="/bsc.html">IGNOU BSc Assignments</a></li>
-      <li><a href="/msc.html">IGNOU MSc Assignments</a></li>
+      <li><a href="/msc/">IGNOU MSc Assignments</a></li>
       <li><a href="/blog.html">IGNOU Blog</a></li>
     </ul>
   </section>
@@ -82,63 +120,74 @@
 <div id="footer"></div>
 <script>
   fetch("../footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
+    .then(r => r.text())
+    .then(d => document.getElementById("footer").innerHTML = d);
 </script>
 
-<!-- 🔥 AUTO NEWS SCRIPT WITH AUTO IMAGE -->
+<!-- ================= NEWS SCRIPT ================= -->
 <script>
 fetch("news-data.json")
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
-    let html = "";
 
-    data.forEach(item => {
+    /* ---------- HERO NEWS ---------- */
+    const heroItem = data.find(item => item.hero === true);
+    const heroBox = document.getElementById("hero-news");
 
-      // ✅ image name same as html file
-      let imageName = item.url.replace(".html", ".png");
+    if (heroItem) {
+      const heroImg = heroItem.url.replace(".html", ".png");
 
-      html += `
-        <article class="news-card">
-
-          <img src="${imageName}"
-               alt="${item.title}"
-               loading="lazy">
-
-          <h2>
-            <a href="${item.url}">
-              ${item.title}
-            </a>
-          </h2>
-
+      heroBox.innerHTML = `
+        <article class="hero-news">
+          <img src="${heroImg}" alt="${heroItem.title}" loading="lazy">
+          <h2><a href="${heroItem.url}">${heroItem.title}</a></h2>
           <p class="news-meta">
-            Published: ${item.date} | Category: ${item.category}
+            Published: ${heroItem.date} | Category: ${heroItem.category}
           </p>
-
-          <p>${item.summary}</p>
-
-          <a href="${item.url}" class="read-more">
+          <p>${heroItem.description}</p>
+          <a class="read-more" href="${heroItem.url}">
             Read Full News →
           </a>
         </article>
       `;
-    });
+    }
 
-    document.getElementById("news-list").innerHTML = html;
+    /* ---------- NORMAL NEWS ---------- */
+    let listHTML = "";
+
+    data
+      .filter(item => !item.hero)
+      .forEach(item => {
+        const img = item.url.replace(".html", ".png");
+
+        listHTML += `
+          <article class="news-card">
+            <img src="${img}" alt="${item.title}" loading="lazy">
+            <h3><a href="${item.url}">${item.title}</a></h3>
+            <p class="news-meta">
+              Published: ${item.date} | Category: ${item.category}
+            </p>
+            <p>${item.description}</p>
+            <a class="read-more" href="${item.url}">
+              Read Full News →
+            </a>
+          </article>
+        `;
+      });
+
+    document.getElementById("news-list").innerHTML = listHTML;
   })
   .catch(() => {
     document.getElementById("news-list").innerHTML =
-      "<p>News load nahi ho rahi.</p>";
+      "<p>Unable to load news at the moment.</p>";
   });
 </script>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/919149489238?text=Hi%20I%20need%20latest%20IGNOU%20news%20and%20guidance"
+<!-- WHATSAPP -->
+<a href="https://wa.me/919149489238?text=Hi%20I%20need%20latest%20IGNOU%20news"
    class="whatsapp-float"
    target="_blank"
-   aria-label="Chat on WhatsApp">
-   💬
-</a>
+   aria-label="Chat on WhatsApp">💬</a>
 
 </body>
 </html>

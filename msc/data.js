@@ -108,86 +108,90 @@ body{
   © 2026 IGNOU Assignments Hub · All Rights Reserved
 </footer>
 
-<!-- ================= JSON DATA ================= -->
+<!-- ================= DATA ================= -->
 <script>
-const mscData = {
+window.mscData = {
   "1stYear": [
     {
       "name": "MSc Zoology",
       "year": "1st Year",
       "baseUrl": "/msc/zoology/",
-      "codes": ["MZO-001", "MZO-002", "MZO-003"]
+      "codes": ["MZO-001","MZO-002","MZO-003"]
     },
     {
       "name": "MSc Environmental Science",
       "year": "1st Year",
       "baseUrl": "/msc/environment/",
-      "codes": ["MEV-011", "MEV-012", "MEV-013", "MEV-014", "MEV-015", "MEV-016"]
+      "codes": ["MEV-011","MEV-012","MEV-013","MEV-014","MEV-015","MEV-016"]
     },
     {
       "name": "MSc Geography",
       "year": "1st Year",
       "baseUrl": "/msc/geography/",
-      "codes": ["MGP-001", "MGP-002", "MGP-003"]
+      "codes": ["MGP-001","MGP-002","MGP-003"]
     }
   ],
-
   "2ndYear": [
     {
       "name": "MSc Zoology",
       "year": "2nd Year",
       "baseUrl": "/msc/zoology/",
-      "codes": ["MZO-004", "MZO-005", "MZO-006"]
+      "codes": ["MZO-004","MZO-005","MZO-006"]
     },
     {
       "name": "MSc Environmental Science",
       "year": "2nd Year",
       "baseUrl": "/msc/environment/",
-      "codes": ["MEV-017", "MEV-018", "MEV-019"]
+      "codes": ["MEV-017","MEV-018","MEV-019"]
     },
     {
       "name": "MSc Geography",
       "year": "2nd Year",
       "baseUrl": "/msc/geography/",
-      "codes": ["MGP-004", "MGP-005", "MGP-006"]
+      "codes": ["MGP-004","MGP-005","MGP-006"]
     }
   ]
 };
 </script>
 
-<!-- ================= AUTO GENERATOR SCRIPT ================= -->
+<!-- ================= GENERATOR ================= -->
 <script>
-function generateSubjects(data, targetId){
-  const container = document.getElementById(targetId);
+document.addEventListener("DOMContentLoaded", function(){
 
-  data.forEach(subject => {
-    let html = `
-      <div class="subject-card">
-        <h3>${subject.name} – ${subject.year}</h3>
-        <div class="course-list">
-    `;
+  function generateSubjects(data, targetId){
+    const container = document.getElementById(targetId);
+    if(!container || !data) return;
 
-    subject.codes.forEach(code => {
-      const slug = code.toLowerCase().replace(/\s+/g,'');
+    data.forEach(subject => {
+      let html = `
+        <div class="subject-card">
+          <h3>${subject.name} – ${subject.year}</h3>
+          <div class="course-list">
+      `;
+
+      subject.codes.forEach(code => {
+        const slug = code.toLowerCase();
+        html += `
+          <div class="course-item">
+            <span>${code}</span>
+            <a href="${subject.baseUrl}${slug}.html">View</a>
+          </div>
+        `;
+      });
+
       html += `
-        <div class="course-item">
-          <span>${code}</span>
-          <a href="${subject.baseUrl}${slug}.html">View</a>
+          </div>
         </div>
       `;
+
+      container.insertAdjacentHTML("beforeend", html);
     });
+  }
 
-    html += `
-        </div>
-      </div>
-    `;
+  generateSubjects(window.mscData["1stYear"], "msc-1st");
+  generateSubjects(window.mscData["2ndYear"], "msc-2nd");
 
-    container.insertAdjacentHTML("beforeend", html);
-  });
-}
-
-generateSubjects(mscData["1stYear"], "msc-1st");
-generateSubjects(mscData["2ndYear"], "msc-2nd");
+});
 </script>
 
 </body>

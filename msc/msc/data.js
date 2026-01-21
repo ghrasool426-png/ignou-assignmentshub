@@ -122,6 +122,12 @@ const mscData = {
       "year": "1st Year",
       "baseUrl": "/msc/environment/",
       "codes": ["MEV-011", "MEV-012", "MEV-013", "MEV-014", "MEV-015", "MEV-016"]
+    },
+    {
+  "name":"MSc Geography",
+  "year":"1st Year",
+  "baseUrl":"/msc/geography/",
+  "codes":["MGP-001","MGP-002","MGP-003"]
     }
   ],
   "2ndYear": [

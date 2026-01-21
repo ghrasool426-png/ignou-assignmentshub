@@ -92,12 +92,13 @@ body{
   <p>Auto-generated Subject-wise & Course-wise Assignment Guidance</p>
 </section>
 
-<!-- CONTAINERS -->
+<!-- 1st YEAR -->
 <section class="assignment-section">
   <h2>IGNOU MSc 1st Year Assignments</h2>
   <div class="subject-grid" id="msc-1st"></div>
 </section>
 
+<!-- 2nd YEAR -->
 <section class="assignment-section">
   <h2>IGNOU MSc 2nd Year Assignments</h2>
   <div class="subject-grid" id="msc-2nd"></div>
@@ -124,12 +125,13 @@ const mscData = {
       "codes": ["MEV-011", "MEV-012", "MEV-013", "MEV-014", "MEV-015", "MEV-016"]
     },
     {
-  "name":"MSc Geography",
-  "year":"1st Year",
-  "baseUrl":"/msc/geography/",
-  "codes":["MGP-001","MGP-002","MGP-003"]
+      "name": "MSc Geography",
+      "year": "1st Year",
+      "baseUrl": "/msc/geography/",
+      "codes": ["MGP-001", "MGP-002", "MGP-003"]
     }
   ],
+
   "2ndYear": [
     {
       "name": "MSc Zoology",
@@ -142,6 +144,12 @@ const mscData = {
       "year": "2nd Year",
       "baseUrl": "/msc/environment/",
       "codes": ["MEV-017", "MEV-018", "MEV-019"]
+    },
+    {
+      "name": "MSc Geography",
+      "year": "2nd Year",
+      "baseUrl": "/msc/geography/",
+      "codes": ["MGP-004", "MGP-005", "MGP-006"]
     }
   ]
 };
@@ -160,7 +168,7 @@ function generateSubjects(data, targetId){
     `;
 
     subject.codes.forEach(code => {
-      const slug = code.toLowerCase();
+      const slug = code.toLowerCase().replace(/\s+/g,'');
       html += `
         <div class="course-item">
           <span>${code}</span>

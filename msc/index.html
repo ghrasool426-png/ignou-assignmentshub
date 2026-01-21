@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>IGNOU MSc Assignments (Free) | 1st & 2nd Year</title>
-<meta name="description" content="IGNOU MSc 1st & 2nd Year assignment guidance for Zoology and Environmental Science with course-wise solutions.">
+<meta name="description" content="IGNOU MSc 1st & 2nd Year assignment guidance with subject-wise and course-wise solutions.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -25,8 +25,14 @@ body{
 .hero p{font-size:18px;max-width:900px;margin:auto;}
 
 /* SECTION */
-.assignment-section{padding:60px 20px;}
-.assignment-section h2{text-align:center;font-size:30px;margin-bottom:40px;}
+.assignment-section{
+  padding:60px 20px;
+}
+.assignment-section h2{
+  text-align:center;
+  font-size:30px;
+  margin-bottom:40px;
+}
 
 /* GRID */
 .subject-grid{
@@ -85,73 +91,64 @@ body{
 <!-- HERO -->
 <section class="hero">
   <h1>IGNOU MSc Assignments (Free)</h1>
-  <p>Course-wise IGNOU MSc Assignment Guidance – Zoology & Environmental Science</p>
+  <p>Subject-wise & Course-wise IGNOU MSc Assignment Guidance</p>
 </section>
 
-<!-- MSc 1st YEAR -->
+<!-- 1st YEAR -->
 <section class="assignment-section">
-<h2>IGNOU MSc 1st Year Assignments</h2>
-
-<div class="subject-grid">
-
-<!-- ZOOLOGY 1st YEAR -->
-<div class="subject-card">
-<h3>MSc Zoology – 1st Year</h3>
-<div class="course-list">
-  <div class="course-item"><span>MZO-001</span><a href="/msc/zoology/mzo-001.html">View</a></div>
-  <div class="course-item"><span>MZO-002</span><a href="/msc/zoology/mzo-002.html">View</a></div>
-  <div class="course-item"><span>MZO-003</span><a href="/msc/zoology/mzo-003.html">View</a></div>
-</div>
-</div>
-
-<!-- ENVIRONMENT 1st YEAR -->
-<div class="subject-card">
-<h3>MSc Environmental Science – 1st Year</h3>
-<div class="course-list">
-  <div class="course-item"><span>MEV-011</span><a href="/msc/environment/mev-011.html">View</a></div>
-  <div class="course-item"><span>MEV-012</span><a href="/msc/environment/mev-012.html">View</a></div>
-  <div class="course-item"><span>MEV-013</span><a href="/msc/environment/mev-013.html">View</a></div>
-  <div class="course-item"><span>MEV-014</span><a href="/msc/environment/mev-014.html">View</a></div>
-  <div class="course-item"><span>MEV-015</span><a href="/msc/environment/mev-015.html">View</a></div>
-  <div class="course-item"><span>MEV-016</span><a href="/msc/environment/mev-016.html">View</a></div>
-</div>
-</div>
-
-</div>
+  <h2>IGNOU MSc 1st Year Assignments</h2>
+  <div class="subject-grid" id="msc-1st"></div>
 </section>
 
-<!-- MSc 2nd YEAR -->
+<!-- 2nd YEAR -->
 <section class="assignment-section">
-<h2>IGNOU MSc 2nd Year Assignments</h2>
-
-<div class="subject-grid">
-
-<!-- ZOOLOGY 2nd YEAR -->
-<div class="subject-card">
-<h3>MSc Zoology – 2nd Year</h3>
-<div class="course-list">
-  <div class="course-item"><span>MZO-004</span><a href="/msc/zoology/mzo-004.html">View</a></div>
-  <div class="course-item"><span>MZO-005</span><a href="/msc/zoology/mzo-005.html">View</a></div>
-  <div class="course-item"><span>MZO-006</span><a href="/msc/zoology/mzo-006.html">View</a></div>
-</div>
-</div>
-
-<!-- ENVIRONMENT 2nd YEAR -->
-<div class="subject-card">
-<h3>MSc Environmental Science – 2nd Year</h3>
-<div class="course-list">
-  <div class="course-item"><span>MEV-017</span><a href="/msc/environment/mev-017.html">View</a></div>
-  <div class="course-item"><span>MEV-018</span><a href="/msc/environment/mev-018.html">View</a></div>
-  <div class="course-item"><span>MEV-019</span><a href="/msc/environment/mev-019.html">View</a></div>
-</div>
-</div>
-
-</div>
+  <h2>IGNOU MSc 2nd Year Assignments</h2>
+  <div class="subject-grid" id="msc-2nd"></div>
 </section>
 
 <footer class="footer">
-© 2026 IGNOU Assignments Hub · All Rights Reserved
+  © 2026 IGNOU Assignments Hub · All Rights Reserved
 </footer>
+
+<!-- ================= LOAD DATA ================= -->
+<script src="data.js"></script>
+
+<!-- ================= AUTO GENERATOR ================= -->
+<script>
+function generateSubjects(data, targetId){
+  const container = document.getElementById(targetId);
+  if(!container || !data) return;
+
+  data.forEach(subject => {
+    let html = `
+      <div class="subject-card">
+        <h3>${subject.name} – ${subject.year}</h3>
+        <div class="course-list">
+    `;
+
+    subject.codes.forEach(code => {
+      const slug = code.toLowerCase().replace(/[^a-z0-9\-]/g,'');
+      html += `
+        <div class="course-item">
+          <span>${code}</span>
+          <a href="${subject.baseUrl}${slug}.html">View</a>
+        </div>
+      `;
+    });
+
+    html += `
+        </div>
+      </div>
+    `;
+
+    container.insertAdjacentHTML("beforeend", html);
+  });
+}
+
+/* INIT */
+generateSubjects(mscData["1stYear"], "msc-1st");
+generateSubjects(mscData["2ndYear"], "msc-2nd");
+</script>
 
 </body>
 </html>

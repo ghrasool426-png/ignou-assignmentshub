@@ -11,30 +11,27 @@ content="tt2DCaJPrjzygTtnz-OJwPlnLdYSV7E1e0kEW38NgV4" />
 <title>IGNOU Assignment Guidance & Academic Support (Free) | IGNOU Assignments Hub</title>
 
 <meta name="description"
-content="IGNOU Assignments Hub is an independent educational guidance platform helping IGNOU students understand assignment format, answer writing, submission rules, evaluation pattern and academic best practices.">
+content="IGNOU Assignments Hub provides free academic guidance for IGNOU students including assignment format, answer writing rules, previous year question papers and official IGNOU updates.">
 
 <meta name="keywords"
-content="IGNOU assignment guidance, IGNOU assignment format, IGNOU academic help, IGNOU answer writing rules">
+content="IGNOU assignment guidance, IGNOU assignment format, IGNOU previous year question papers, IGNOU news updates, IGNOU academic help">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0a3d62">
 
 <link rel="canonical" href="https://ignouassignmentshub.com/">
 
-<link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="css/style.css"></noscript>
-
 <style>
 body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.9;background:#f7f9fc;color:#222}
 .container{max-width:1100px;margin:auto;padding:25px}
 
 .navbar{background:#0a3d62;color:#fff;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:999}
-.nav-logo{font-weight:bold;font-size:18px}
+.nav-logo a{color:#fff;text-decoration:none;font-weight:bold;font-size:18px}
 .nav-links{display:flex;gap:18px;align-items:center}
 .nav-links a{color:#fff;text-decoration:none}
 
 .dropdown{position:relative}
-.dropdown-content{display:none;position:absolute;background:#fff;top:28px;min-width:160px;box-shadow:0 5px 15px rgba(0,0,0,.15)}
+.dropdown-content{display:none;position:absolute;background:#fff;top:28px;min-width:180px;box-shadow:0 5px 15px rgba(0,0,0,.15)}
 .dropdown-content a{color:#000;padding:10px;display:block;text-decoration:none}
 .dropdown:hover .dropdown-content{display:block}
 
@@ -49,7 +46,6 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.9;background:
 .hero-content{text-align:center;color:#fff;max-width:900px;margin:auto}
 .hero-content h1{font-size:2.6rem;margin-bottom:15px}
 .hero-content p{font-size:1.15rem}
-
 .hero-btn{background:#ffcc00;color:#000;padding:12px 24px;border-radius:6px;font-weight:bold;text-decoration:none;display:inline-block;margin-top:20px}
 
 .program-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
@@ -59,38 +55,10 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.9;background:
 section{margin-bottom:45px}
 h2{color:#0a3d62;margin-bottom:12px}
 
-ul{padding-left:20px}
-
-/* LATEST UPDATES TICKER */
-.latest-updates{
-  background:#8b0000;
-  color:#fff;
-  overflow:hidden;
-  white-space:nowrap;
-  border-bottom:2px solid #600000;
-}
-.ticker-wrap{width:100%;overflow:hidden}
-.ticker{
-  display:inline-block;
-  padding-left:100%;
-  animation:tickerMove 40s linear infinite;
-}
-.ticker a{
-  color:#fff;
-  text-decoration:none;
-  font-size:14px;
-  font-weight:500;
-  margin:0 15px;
-}
-.ticker a:hover{text-decoration:underline}
-.sep{color:#ffd700;margin:0 8px}
-@keyframes tickerMove{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-100%)}
-}
-@media(max-width:768px){
-  .ticker a{font-size:13px}
-}
+.latest-updates{background:#8b0000;color:#fff;overflow:hidden;white-space:nowrap}
+.ticker{display:inline-block;padding-left:100%;animation:tickerMove 40s linear infinite}
+.ticker a{color:#fff;text-decoration:none;font-size:14px;font-weight:500;margin:0 15px}
+@keyframes tickerMove{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
 </style>
 </head>
 
@@ -98,71 +66,54 @@ ul{padding-left:20px}
 
 <!-- NAVBAR -->
 <nav class="navbar">
-<div class="nav-logo">IGNOU Assignments Hub</div>
-<div class="hamburger" onclick="toggleMenu()">☰</div>
-<div class="nav-links" id="navMenu">
-<a href="/">Home</a>
+  <div class="nav-logo">
+    <a href="/">IGNOU Assignments Hub</a>
+  </div>
 
-<div class="dropdown">
-<a href="#">Assignments ▾</a>
-<div class="dropdown-content">
-<a href="/ma/">MA</a>
-<a href="/ba/">BA</a>
-<a href="/bsc/">BSc</a>
-<a href="/bba/">BBA</a>
-<a href="/msc/">MSc</a>
-</div>
-</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-<a href="/blog.html">Blog</a>
-<a href="/news/">News</a>
-<a href="/ignou-study-material.html">Study Material</a>
-<a href="/about.html">About</a>
-<a href="/contact.html">Contact</a>
-</div>
+  <div class="nav-links" id="navMenu">
+    <a href="/">Home</a>
+
+    <div class="dropdown">
+      <a href="/assignments/">Assignments ▾</a>
+      <div class="dropdown-content">
+        <a href="/assignments/ma/">MA</a>
+        <a href="/assignments/ba/">BA</a>
+        <a href="/assignments/bsc/">BSc</a>
+        <a href="/assignments/bba/">BBA</a>
+        <a href="/assignments/msc/">MSc</a>
+      </div>
+    </div>
+
+    <a href="/previous-year-question-papers/">Previous Year Papers</a>
+    <a href="/news/">News & Updates</a>
+    <a href="/blog/">Blog</a>
+    <a href="/study-material/">Study Material</a>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+  </div>
 </nav>
 
 <!-- LATEST UPDATES -->
 <div class="latest-updates">
-  <div class="ticker-wrap">
-    <div class="ticker">
-
-      <a href="https://ignouadmission.samarth.edu.in/" target="_blank" rel="nofollow noopener">
-        🔴 IGNOU Admission 2026 Open – Apply Now (Official)
-      </a>
-
-      <span class="sep">|</span>
-
-      <a href="https://onlinerr.ignou.ac.in/" target="_blank" rel="nofollow noopener">
-        🔔 IGNOU Re-Registration January 2026 – Click Here
-      </a>
-
-      <span class="sep">|</span>
-
-      <a href="https://www.ignou.ac.in/Pages/Placements.aspx" target="_blank" rel="nofollow noopener">
-        💼 IGNOU Campus Placement / Job Fair – Official Notice
-      </a>
-
-      <span class="sep">|</span>
-
-      <a href="https://www.ignou.ac.in/" target="_blank" rel="nofollow noopener">
-        📢 IGNOU Official Notifications & Updates
-      </a>
-
-    </div>
+  <div class="ticker">
+    <a href="https://ignouadmission.samarth.edu.in/" target="_blank" rel="nofollow">🔴 IGNOU Admission 2026 Open</a> |
+    <a href="https://onlinerr.ignou.ac.in/" target="_blank" rel="nofollow">🔔 IGNOU Re-Registration January 2026</a> |
+    <a href="https://www.ignou.ac.in/" target="_blank" rel="nofollow">📢 Official IGNOU Notifications</a>
   </div>
 </div>
 
 <!-- HERO -->
 <header class="hero-header">
-<div class="hero-content">
-<h1>IGNOU Assignment Guidance & Academic Support</h1>
-<p>
-A free, independent educational platform helping IGNOU students understand
-assignment writing rules, academic structure, evaluation methods and ethical learning practices.
-</p>
-<a href="#programs" class="hero-btn">Explore Academic Guidance</a>
-</div>
+  <div class="hero-content">
+    <h1>IGNOU Assignment Guidance & Academic Support</h1>
+    <p>
+      Free and independent academic guidance platform for IGNOU students.
+      Understand assignment writing rules, evaluation methods and exam preparation.
+    </p>
+    <a href="#programs" class="hero-btn">Explore Academic Guidance</a>
+  </div>
 </header>
 
 <main class="container">
@@ -170,12 +121,10 @@ assignment writing rules, academic structure, evaluation methods and ethical lea
 <section>
 <h2>What Is IGNOU Assignments Hub?</h2>
 <p>
-IGNOU Assignments Hub is an independent academic guidance website created exclusively
-for students of Indira Gandhi National Open University (IGNOU).
-</p>
-<p>
-We help learners understand assignment format, academic expectations and evaluation methods
-without promoting copying or unethical practices.
+IGNOU Assignments Hub is an independent educational guidance website created for
+students of Indira Gandhi National Open University. The platform focuses on helping
+learners understand academic requirements, assignment format and evaluation
+criteria in a clear and ethical manner.
 </p>
 </section>
 
@@ -183,37 +132,64 @@ without promoting copying or unethical practices.
 <h2>Programme-wise Academic Guidance</h2>
 
 <div class="program-grid">
-<a href="/ma/" class="card"><h3>MA Programmes</h3><p>Assignment structure & theory guidance.</p></a>
-<a href="/ba/" class="card"><h3>BA Programmes</h3><p>Humanities academic support.</p></a>
-<a href="/bsc/" class="card"><h3>BSc Programmes</h3><p>Science-focused guidance.</p></a>
-<a href="/bba/" class="card"><h3>BBA Programmes</h3><p>Management & business structure.</p></a>
-<a href="/msc/" class="card"><h3>MSc Programmes</h3><p>Postgraduate academic clarity.</p></a>
-<a href="/blog.html" class="card"><h3>Academic Blog</h3><p>Exam tips & learning strategies.</p></a>
+<a href="/assignments/ma/" class="card"><h3>MA Programmes</h3><p>Arts & social science academic guidance.</p></a>
+<a href="/assignments/ba/" class="card"><h3>BA Programmes</h3><p>Humanities assignment structure support.</p></a>
+<a href="/assignments/bsc/" class="card"><h3>BSc Programmes</h3><p>Science concepts & assignment clarity.</p></a>
+<a href="/assignments/bba/" class="card"><h3>BBA Programmes</h3><p>Business & management guidance.</p></a>
+<a href="/assignments/msc/" class="card"><h3>MSc Programmes</h3><p>Postgraduate academic support.</p></a>
+<a href="/news/" class="card"><h3>News & Latest Updates</h3><p>Admissions, exams, results & notices.</p></a>
+<a href="/previous-year-question-papers/" class="card"><h3>Previous Year Question Papers</h3><p>IGNOU past year exam papers.</p></a>
+<a href="/blog/" class="card"><h3>Academic Blog</h3><p>Study tips & exam strategies.</p></a>
 </div>
+</section>
+
+<!-- 🔥 THIN CONTENT FIX -->
+<section>
+<h2>Complete Academic Guidance for IGNOU Students</h2>
+
+<p>
+IGNOU Assignments Hub is designed to support distance learners by providing clear
+academic guidance rather than ready-made answers. Many IGNOU students face
+difficulties in understanding assignment questions, word limits, presentation style
+and evaluation standards. This platform helps learners overcome these challenges
+through structured explanations and academic clarity.
+</p>
+
+<p>
+The website explains how to approach Tutor Marked Assignments (TMAs), how to
+interpret questions correctly, organise answers with proper headings and maintain
+originality in academic writing. Students also gain an understanding of IGNOU’s
+credit system, internal assessment and term-end examination process.
+</p>
+
+<p>
+Programme-wise guidance is provided for MA, BA, BSc, BBA and MSc courses to help
+students develop a strong conceptual foundation. Previous year question papers are
+included to familiarise learners with exam patterns and improve preparation
+strategies. Regular updates related to admissions, re-registration and examinations
+are shared only from official IGNOU sources.
+</p>
+
+<p>
+All content published on this website is original, informative and focused on ethical
+learning. The platform strictly discourages plagiarism and promotes genuine academic
+effort to help students achieve long-term success.
+</p>
 </section>
 
 <section>
 <h2>Disclaimer</h2>
 <p>
-This website is not affiliated with IGNOU. Content is provided for educational guidance only.
+This website is not affiliated with IGNOU. All content is provided solely for
+educational guidance purposes.
 </p>
 </section>
 
 </main>
 
-<div id="footer"></div>
-
-<script defer>
-window.addEventListener("load",()=>{
-fetch("footer.html")
-.then(r=>r.text())
-.then(d=>document.getElementById("footer").innerHTML=d);
-});
-</script>
-
 <script>
 function toggleMenu(){
-document.getElementById("navMenu").classList.toggle("show");
+  document.getElementById("navMenu").classList.toggle("show");
 }
 </script>
 

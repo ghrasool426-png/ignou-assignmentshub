@@ -60,6 +60,37 @@ section{margin-bottom:45px}
 h2{color:#0a3d62;margin-bottom:12px}
 
 ul{padding-left:20px}
+
+/* LATEST UPDATES TICKER */
+.latest-updates{
+  background:#8b0000;
+  color:#fff;
+  overflow:hidden;
+  white-space:nowrap;
+  border-bottom:2px solid #600000;
+}
+.ticker-wrap{width:100%;overflow:hidden}
+.ticker{
+  display:inline-block;
+  padding-left:100%;
+  animation:tickerMove 40s linear infinite;
+}
+.ticker a{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:500;
+  margin:0 15px;
+}
+.ticker a:hover{text-decoration:underline}
+.sep{color:#ffd700;margin:0 8px}
+@keyframes tickerMove{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-100%)}
+}
+@media(max-width:768px){
+  .ticker a{font-size:13px}
+}
 </style>
 </head>
 
@@ -91,6 +122,37 @@ ul{padding-left:20px}
 </div>
 </nav>
 
+<!-- LATEST UPDATES -->
+<div class="latest-updates">
+  <div class="ticker-wrap">
+    <div class="ticker">
+
+      <a href="https://ignouadmission.samarth.edu.in/" target="_blank" rel="nofollow noopener">
+        🔴 IGNOU Admission 2026 Open – Apply Now (Official)
+      </a>
+
+      <span class="sep">|</span>
+
+      <a href="https://onlinerr.ignou.ac.in/" target="_blank" rel="nofollow noopener">
+        🔔 IGNOU Re-Registration January 2026 – Click Here
+      </a>
+
+      <span class="sep">|</span>
+
+      <a href="https://www.ignou.ac.in/Pages/Placements.aspx" target="_blank" rel="nofollow noopener">
+        💼 IGNOU Campus Placement / Job Fair – Official Notice
+      </a>
+
+      <span class="sep">|</span>
+
+      <a href="https://www.ignou.ac.in/" target="_blank" rel="nofollow noopener">
+        📢 IGNOU Official Notifications & Updates
+      </a>
+
+    </div>
+  </div>
+</div>
+
 <!-- HERO -->
 <header class="hero-header">
 <div class="hero-content">
@@ -107,39 +169,13 @@ assignment writing rules, academic structure, evaluation methods and ethical lea
 
 <section>
 <h2>What Is IGNOU Assignments Hub?</h2>
-
 <p>
 IGNOU Assignments Hub is an independent academic guidance website created exclusively
-for students of Indira Gandhi National Open University (IGNOU). The platform aims to
-simplify complex academic instructions related to assignments, examinations and evaluation
-procedures followed by IGNOU.
+for students of Indira Gandhi National Open University (IGNOU).
 </p>
-
 <p>
-Distance learning students often struggle due to limited academic support, unclear
-assignment guidelines and lack of practical examples. This website bridges that gap
-by providing structured explanations, writing guidance and conceptual clarity.
-</p>
-
-<p>
-We strictly promote ethical learning. Our content is designed to help students
-<strong>understand how to write</strong> assignments, not to copy or submit ready-made answers.
-</p>
-</section>
-
-<section>
-<h2>Who Should Use This Website?</h2>
-
-<ul>
-<li>IGNOU students looking for assignment writing guidance</li>
-<li>Students confused about format, structure and presentation</li>
-<li>Learners preparing for exams and internal assessments</li>
-<li>Distance learners needing academic clarity</li>
-</ul>
-
-<p>
-This platform is not intended to replace official IGNOU study material, but to
-<strong>complement it</strong> with clear academic explanations.
+We help learners understand assignment format, academic expectations and evaluation methods
+without promoting copying or unethical practices.
 </p>
 </section>
 
@@ -147,66 +183,20 @@ This platform is not intended to replace official IGNOU study material, but to
 <h2>Programme-wise Academic Guidance</h2>
 
 <div class="program-grid">
-
-<a href="/ma/" class="card">
-<h3>MA Programmes</h3>
-<p>Assignment structure and theory-based guidance.</p>
-</a>
-
-<a href="/ba/" class="card">
-<h3>BA Programmes</h3>
-<p>Humanities assignment format and academic tips.</p>
-</a>
-
-<a href="/bsc/" class="card">
-<h3>BSc Programmes</h3>
-<p>Concept-focused science assignment guidance.</p>
-</a>
-
-<a href="/bba/" class="card">
-<h3>BBA Programmes</h3>
-<p>Business and management academic structure.</p>
-</a>
-
-<a href="/msc/" class="card">
-<h3>MSc Programmes</h3>
-<p>Postgraduate-level scientific explanation.</p>
-</a>
-
-<a href="/blog.html" class="card">
-<h3>Academic Blog</h3>
-<p>Guides, exam tips and learning strategies.</p>
-</a>
-
+<a href="/ma/" class="card"><h3>MA Programmes</h3><p>Assignment structure & theory guidance.</p></a>
+<a href="/ba/" class="card"><h3>BA Programmes</h3><p>Humanities academic support.</p></a>
+<a href="/bsc/" class="card"><h3>BSc Programmes</h3><p>Science-focused guidance.</p></a>
+<a href="/bba/" class="card"><h3>BBA Programmes</h3><p>Management & business structure.</p></a>
+<a href="/msc/" class="card"><h3>MSc Programmes</h3><p>Postgraduate academic clarity.</p></a>
+<a href="/blog.html" class="card"><h3>Academic Blog</h3><p>Exam tips & learning strategies.</p></a>
 </div>
 </section>
 
 <section>
-<h2>Academic Integrity & Disclaimer</h2>
-
+<h2>Disclaimer</h2>
 <p>
-IGNOU Assignments Hub is <strong>not affiliated</strong> with Indira Gandhi National Open University
-(IGNOU) or any of its regional or study centres.
+This website is not affiliated with IGNOU. Content is provided for educational guidance only.
 </p>
-
-<p>
-All content is published strictly for <strong>educational guidance and reference purposes only</strong>.
-Students must prepare and submit assignments in their own words following official
-IGNOU guidelines.
-</p>
-</section>
-
-<section>
-<h2>Frequently Asked Questions</h2>
-
-<p><strong>Is this an official IGNOU website?</strong><br>
-No. This is an independent educational guidance platform.</p>
-
-<p><strong>Can I copy answers from this site?</strong><br>
-No. Students should only use the content to understand concepts and writing methods.</p>
-
-<p><strong>Is the guidance free?</strong><br>
-Yes. All academic guidance on this website is provided free of cost.</p>
 </section>
 
 </main>

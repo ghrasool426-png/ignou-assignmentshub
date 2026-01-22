@@ -1,11 +1,14 @@
 [
   {
-  "title": "IGNOU Campus Placement Drive 2026 (Job Fair)",
-  "date": "27 January 2026",
-  "link": "/news/ignou-campus-placement-drive-2026.html",
-  "category": "Placement",
-  "tag": "IGNOU CPC",
-  "status": "New"
+    "id": 6,
+    "hero": false,
+    "title": "IGNOU Campus Placement Drive 2026 (Job Fair)",
+    "description": "IGNOU Career Placement Cell will organise a campus placement drive and job fair in 2026 for eligible students.",
+    "url": "/news/ignou-campus-placement-drive-2026.html",
+    "date": "2026-01-27",
+    "category": "Placement",
+    "tag": "IGNOU CPC",
+    "status": "New"
   },
   {
     "id": 1,
@@ -29,7 +32,7 @@
     "id": 3,
     "hero": false,
     "title": "President Droupadi Murmu Inaugurates IGNOU Regional Skill Centre in Odisha",
-    "description": "The President of India inaugurated a new IGNOU Regional Skill Centre in Odisha to strengthen skill-based and vocational education.",
+    "description": "The President of India inaugurated a new IGNOU Regional Skill Centre in Odisha to strengthen skill-based education.",
     "url": "/news/president-murmu-inaugurates-ignou-skill-centre-odisha.html",
     "date": "2026-01-02",
     "category": "IGNOU News"
@@ -42,14 +45,5 @@
     "url": "/news/ignou-new-skill-courses-2026.html",
     "date": "2026-02-01",
     "category": "IGNOU Update"
-  },
-  {
-    "id": 5,
-    "hero": false,
-    "title": "IGNOU Announces Job Fair and Placement Drive 2026",
-    "description": "IGNOU will organise a Job Fair and Placement Drive in 2026 to support employment opportunities for UG and PG students.",
-    "url": "/news/ignou-job-fair-2026.html",
-    "date": "2026-01-10",
-    "category": "Career Update"
   }
 ]

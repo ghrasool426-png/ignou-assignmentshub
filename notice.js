@@ -16,7 +16,8 @@
 
       ticker.innerHTML = "";
 
-      function addOnce() {
+      // Add notices MANY TIMES to increase length
+      for(let i = 0; i < 6; i++){
         data.notices.forEach(n => {
           const a = document.createElement("a");
           a.href = n.link;
@@ -33,21 +34,9 @@
         });
       }
 
-      // 🔁 ADD 4 TIMES (THIS IS THE REAL FIX)
-      addOnce();
-      addOnce();
-      addOnce();
-      addOnce();
-
-      /* 🔥 TRUE SPEED CONTROL */
-      const pixelsPerSecond = 15; // 👈 VERY SLOW (10–20 range)
-      const totalWidth = ticker.scrollWidth / 2;
-      const duration = totalWidth / pixelsPerSecond;
-
-      ticker.style.animationDuration = duration + "s";
       noticeBar.style.display = "block";
     })
-    .catch(() => {
+    .catch(()=>{
       noticeBar.style.display = "none";
     });
 

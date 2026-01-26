@@ -229,8 +229,8 @@ body{
 /* Mobile safety */
 @media(max-width:768px){
   .whatsapp-float{animation:none;}
-       }
-/* ===== NOTICE BAR (IGNOU OFFICIAL UPDATES) ===== */
+       
+/* ===== NOTICE BAR ===== */
 .latest-updates{
   background:#8b0000;
   color:#fff;
@@ -245,9 +245,9 @@ body{
 }
 
 .ticker{
-  display:flex;
-  width:max-content;
-  animation: tickerScroll linear infinite;
+  display:inline-block;
+  white-space:nowrap;
+  animation: tickerSlow 120s linear infinite; /* 🔥 VERY SLOW */
 }
 
 .ticker a{
@@ -255,18 +255,17 @@ body{
   text-decoration:none;
   font-size:14px;
   font-weight:600;
-  padding:10px 30px;
+  padding:10px 35px;
   white-space:nowrap;
 }
 
 .sep{
   color:#ffd700;
   font-weight:bold;
-  padding:0 10px;
 }
 
-/* animation will be controlled by JS */
-@keyframes tickerScroll{
-  from{ transform: translateX(0); }
-  to{ transform: translateX(-50%); }
+/* 🔥 REAL SLOW ANIMATION */
+@keyframes tickerSlow{
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-300%); }
 }

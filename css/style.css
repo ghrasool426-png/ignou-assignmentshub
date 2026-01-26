@@ -233,7 +233,7 @@ body{
 /* ===== NOTICE BAR (IGNOU OFFICIAL UPDATES) ===== */
 .latest-updates{
   background:#8b0000;
-  color:#ffffff;
+  color:#fff;
   overflow:hidden;
   white-space:nowrap;
   border-bottom:2px solid #600000;
@@ -245,20 +245,28 @@ body{
 }
 
 .ticker{
-  display:inline-flex;
-  align-items:center;
-  animation: tickerMove 35s linear infinite;
+  display:flex;
+  width:max-content;
+  animation: tickerScroll linear infinite;
 }
 
 .ticker a{
-  color:#ffffff;
+  color:#fff;
   text-decoration:none;
   font-size:14px;
   font-weight:600;
-  padding:10px 25px;
+  padding:10px 30px;
   white-space:nowrap;
 }
 
 .sep{
   color:#ffd700;
   font-weight:bold;
+  padding:0 10px;
+}
+
+/* animation will be controlled by JS */
+@keyframes tickerScroll{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}

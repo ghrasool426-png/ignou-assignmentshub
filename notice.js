@@ -16,7 +16,7 @@
 
       ticker.innerHTML = "";
 
-      function addNotices() {
+      function addOnce() {
         data.notices.forEach(n => {
           const a = document.createElement("a");
           a.href = n.link;
@@ -33,13 +33,16 @@
         });
       }
 
-      // duplicate for smooth slow scroll
-      addNotices();
-      addNotices();
+      // 🔁 ADD 4 TIMES (THIS IS THE REAL FIX)
+      addOnce();
+      addOnce();
+      addOnce();
+      addOnce();
 
-      const speed = 30; // 🔥 slow speed (change 20–40)
-      const width = ticker.scrollWidth / 2;
-      const duration = width / speed;
+      /* 🔥 TRUE SPEED CONTROL */
+      const pixelsPerSecond = 15; // 👈 VERY SLOW (10–20 range)
+      const totalWidth = ticker.scrollWidth / 2;
+      const duration = totalWidth / pixelsPerSecond;
 
       ticker.style.animationDuration = duration + "s";
       noticeBar.style.display = "block";

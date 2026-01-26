@@ -247,7 +247,7 @@ body{
 .ticker{
   display:inline-block;
   white-space:nowrap;
-  animation: tickerSlow 120s linear infinite; /* 🔥 VERY SLOW */
+  animation: tickerSlow 240s linear infinite; /* 🔥 VERY SLOW */
 }
 
 .ticker a{

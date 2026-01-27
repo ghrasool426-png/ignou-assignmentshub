@@ -230,7 +230,7 @@ body{
 @media(max-width:768px){
   .whatsapp-float{animation:none;}
 /* =========================
-   NOTICE BAR – FINAL NO-BLANK
+   NOTICE BAR – IMMEDIATE VISIBILITY FIX
    ========================= */
 
 .latest-updates {
@@ -239,33 +239,48 @@ body{
   overflow: hidden;
   white-space: nowrap;
   border-bottom: 2px solid #600000;
-  position: relative; /* Added for proper overflow control */
+  height: 44px; /* Fixed height to prevent layout shift */
+  position: relative;
 }
 
 .ticker-wrap {
   width: 100%;
-  overflow: hidden;
+  height: 100%;
   position: relative;
-  display: flex; /* Ensures proper layout */
+  overflow: hidden;
 }
 
-/* default state - HIDDEN until JS initializes */
+/* Default loading text - shows immediately */
+.default-text {
+  color: #ffd900;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 28px;
+  white-space: nowrap;
+  display: inline-block;
+  line-height: 24px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+/* Ticker - hidden by default */
 .ticker {
-  display: inline-flex;
+  display: none; /* Hidden until JS loads */
   align-items: center;
   white-space: nowrap;
-  /* DO NOT set position or transform here - let JS handle it */
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform;
 }
 
-/* JavaScript will add this class with proper initial position */
-.ticker.initialized {
-  /* Animation will be applied by JS */
-}
-
-/* Animation class - JS will apply this AFTER setting initial position */
-.ticker.animate {
-  animation: noticeScroll 90s linear infinite;
-  /* NO animation-delay here - we want to start from visible position */
+/* When JS loads content */
+.ticker.loaded {
+  display: inline-flex;
 }
 
 /* links */
@@ -276,7 +291,8 @@ body{
   font-weight: 600;
   padding: 10px 28px;
   white-space: nowrap;
-  display: inline-block; /* Ensures proper click area */
+  display: inline-block;
+  line-height: 24px;
 }
 
 /* separator */
@@ -284,30 +300,4 @@ body{
   color: #ffd900;
   font-weight: bold;
   padding: 0 5px;
-}
-
-/* loading text (blank fix) - HIDE when JS loads */
-.default-text {
-  color: #ffd900;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 10px 28px;
-  white-space: nowrap;
-  display: none; /* Hide by default, JS will show temporarily */
-}
-
-/* The actual scroll animation */
-@keyframes noticeScroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%); /* Only need -100% with duplicated content */
-  }
-}
-
-/* Duplicate content for seamless loop (handled by JS) */
-.ticker-content {
-  display: inline-flex;
-  align-items: center;
 }

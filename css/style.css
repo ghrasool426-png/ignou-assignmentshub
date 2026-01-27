@@ -230,8 +230,9 @@ body{
 @media(max-width:768px){
   .whatsapp-float{animation:none;}
        
-/* =========================
-   NOTICE BAR (FINAL FIX)
+/* 
+}/* =========================
+   NOTICE BAR – FINAL NO-BLANK
    ========================= */
 
 .latest-updates{
@@ -242,25 +243,25 @@ body{
   border-bottom:2px solid #600000;
 }
 
-/* wrapper */
 .ticker-wrap{
   width:100%;
   overflow:hidden;
 }
 
-/* default state: NO animation */
+/* default state */
 .ticker{
   display:inline-flex;
   align-items:center;
   white-space:nowrap;
 }
 
-/* animation starts only after JS adds .run */
+/* animation starts AFTER JS adds .run */
 .ticker.run{
   animation: noticeScroll 90s linear infinite;
+  animation-delay: -45s; /* 🔥 THIS IS THE REAL FIX */
 }
 
-/* notice links */
+/* links */
 .ticker a{
   color:#ffffff;
   text-decoration:none;
@@ -276,7 +277,7 @@ body{
   font-weight:bold;
 }
 
-/* default loading text (blank fix) */
+/* loading text (blank fix) */
 .default-text{
   color:#ffd700;
   font-size:14px;
@@ -285,10 +286,10 @@ body{
   white-space:nowrap;
 }
 
-/* 🔥 REAL SLOW + NO INITIAL BLANK */
+/* slow scroll */
 @keyframes noticeScroll{
   0%{
-    transform:translateX(10%);   /* screen ke andar se start */
+    transform:translateX(100%);
   }
   100%{
     transform:translateX(-240%);

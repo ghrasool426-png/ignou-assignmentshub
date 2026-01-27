@@ -14,10 +14,11 @@
         return;
       }
 
+      // Clear default text
       ticker.innerHTML = "";
 
-      // Add notices MANY TIMES to increase length
-      for(let i = 0; i < 6; i++){
+      // Add notices multiple times (smooth + slow)
+      for (let i = 0; i < 6; i++) {
         data.notices.forEach(n => {
           const a = document.createElement("a");
           a.href = n.link;
@@ -34,9 +35,12 @@
         });
       }
 
+      // 🔥 IMPORTANT: start animation AFTER content is ready
+      ticker.classList.add("run");
+
       noticeBar.style.display = "block";
     })
-    .catch(()=>{
+    .catch(() => {
       noticeBar.style.display = "none";
     });
 

@@ -229,69 +229,85 @@ body{
 /* Mobile safety */
 @media(max-width:768px){
   .whatsapp-float{animation:none;}
-       
-/* 
-}/* =========================
+/* =========================
    NOTICE BAR – FINAL NO-BLANK
    ========================= */
 
-.latest-updates{
-  background:#8b0000;
-  color:#ffffff;
-  overflow:hidden;
-  white-space:nowrap;
-  border-bottom:2px solid #600000;
+.latest-updates {
+  background: #8b0000;
+  color: #ffffff;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 2px solid #600000;
+  position: relative; /* Added for proper overflow control */
 }
 
-.ticker-wrap{
-  width:100%;
-  overflow:hidden;
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex; /* Ensures proper layout */
 }
 
-/* default state */
-.ticker{
-  display:inline-flex;
-  align-items:center;
-  white-space:nowrap;
+/* default state - HIDDEN until JS initializes */
+.ticker {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  /* DO NOT set position or transform here - let JS handle it */
 }
 
-/* animation starts AFTER JS adds .run */
-.ticker.run{
+/* JavaScript will add this class with proper initial position */
+.ticker.initialized {
+  /* Animation will be applied by JS */
+}
+
+/* Animation class - JS will apply this AFTER setting initial position */
+.ticker.animate {
   animation: noticeScroll 90s linear infinite;
-  animation-delay: -45s; /* 🔥 THIS IS THE REAL FIX */
+  /* NO animation-delay here - we want to start from visible position */
 }
 
 /* links */
-.ticker a{
-  color:#ffffff;
-  text-decoration:none;
-  font-size:14px;
-  font-weight:600;
-  padding:10px 28px;
-  white-space:nowrap;
+.ticker a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 28px;
+  white-space: nowrap;
+  display: inline-block; /* Ensures proper click area */
 }
 
 /* separator */
-.sep{
-  color:#ffd700;
-  font-weight:bold;
+.sep {
+  color: #ffd900;
+  font-weight: bold;
+  padding: 0 5px;
 }
 
-/* loading text (blank fix) */
-.default-text{
-  color:#ffd700;
-  font-size:14px;
-  font-weight:600;
-  padding:10px 28px;
-  white-space:nowrap;
+/* loading text (blank fix) - HIDE when JS loads */
+.default-text {
+  color: #ffd900;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 28px;
+  white-space: nowrap;
+  display: none; /* Hide by default, JS will show temporarily */
 }
 
-/* slow scroll */
-@keyframes noticeScroll{
-  0%{
-    transform:translateX(100%);
+/* The actual scroll animation */
+@keyframes noticeScroll {
+  0% {
+    transform: translateX(0);
   }
-  100%{
-    transform:translateX(-240%);
+  100% {
+    transform: translateX(-100%); /* Only need -100% with duplicated content */
   }
+}
+
+/* Duplicate content for seamless loop (handled by JS) */
+.ticker-content {
+  display: inline-flex;
+  align-items: center;
 }

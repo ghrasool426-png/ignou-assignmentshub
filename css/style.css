@@ -179,10 +179,7 @@ body{
 @media(max-width:768px){
   .whatsapp-float{animation:none;}
 }
-
-/* =========================
-   NOTICE BAR (CLEAN & STABLE)
-   ========================= */
+/* ===== NOTICE BAR – NO BLANK GUARANTEE ===== */
 
 .latest-updates{
   background:#8b0000;
@@ -199,24 +196,17 @@ body{
   overflow:hidden;
 }
 
-.default-text{
-  color:#ffd700;
-  font-size:14px;
-  font-weight:600;
-  padding:10px 28px;
-  line-height:24px;
-  white-space:nowrap;
-}
-
 .ticker{
   display:inline-flex;
   align-items:center;
   white-space:nowrap;
   height:100%;
+  transform:translateX(0); /* 👈 always visible */
 }
 
+/* animation ONLY when JS adds class */
 .ticker.run{
-  animation:noticeScroll 90s linear infinite;
+  animation: noticeScroll 90s linear infinite;
 }
 
 .ticker a{
@@ -234,7 +224,15 @@ body{
   padding:0 6px;
 }
 
+.default-text{
+  color:#ffd700;
+  font-size:14px;
+  font-weight:600;
+  padding:10px 28px;
+  white-space:nowrap;
+}
+
 @keyframes noticeScroll{
-  0%{transform:translateX(0);}
-  100%{transform:translateX(-240%);}
-  }
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-240%); }
+}

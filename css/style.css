@@ -230,42 +230,67 @@ body{
 @media(max-width:768px){
   .whatsapp-float{animation:none;}
        
-/* ===== NOTICE BAR ===== */
+/* =========================
+   NOTICE BAR (FINAL FIX)
+   ========================= */
+
 .latest-updates{
   background:#8b0000;
-  color:#fff;
+  color:#ffffff;
   overflow:hidden;
   white-space:nowrap;
   border-bottom:2px solid #600000;
 }
 
+/* wrapper */
 .ticker-wrap{
   width:100%;
   overflow:hidden;
 }
 
+/* default state: NO animation */
 .ticker{
-  display:inline-block;
+  display:inline-flex;
+  align-items:center;
   white-space:nowrap;
-  animation: tickerSlow 240s linear infinite; /* 🔥 VERY SLOW */
 }
 
+/* animation starts only after JS adds .run */
+.ticker.run{
+  animation: noticeScroll 90s linear infinite;
+}
+
+/* notice links */
 .ticker a{
-  color:#fff;
+  color:#ffffff;
   text-decoration:none;
   font-size:14px;
   font-weight:600;
-  padding:10px 35px;
+  padding:10px 28px;
   white-space:nowrap;
 }
 
+/* separator */
 .sep{
   color:#ffd700;
   font-weight:bold;
 }
 
-/* 🔥 REAL SLOW ANIMATION */
-@keyframes tickerSlow{
-  0%   { transform: translateX(100%); }
-  100% { transform: translateX(-300%); }
+/* default loading text (blank fix) */
+.default-text{
+  color:#ffd700;
+  font-size:14px;
+  font-weight:600;
+  padding:10px 28px;
+  white-space:nowrap;
+}
+
+/* 🔥 REAL SLOW + NO INITIAL BLANK */
+@keyframes noticeScroll{
+  0%{
+    transform:translateX(10%);   /* screen ke andar se start */
+  }
+  100%{
+    transform:translateX(-240%);
+  }
 }

@@ -34,6 +34,7 @@ body{
 /* ===== LAYOUT ===== */
 .container{padding:20px;}
 
+/* ===== PROGRAM GRID ===== */
 .program-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -127,39 +128,9 @@ body{
   text-decoration:none;
   color:#111;
 }
-.blog-card h3{
-  font-size:1.05rem;
-  margin:10px 0;
-  line-height:1.4;
-}
-.blog-card p{
-  font-size:.95rem;
-  color:#555;
-}
 .blog-card:hover{
   transform:translateY(-6px);
   box-shadow:0 14px 32px rgba(0,0,0,.12);
-}
-@media(max-width:600px){
-  .blog-card{padding:18px;}
-}
-
-/* ===== BADGE & READ MORE ===== */
-.badge{
-  display:inline-block;
-  background:#e9f1ff;
-  color:#0a4dbf;
-  font-size:.75rem;
-  padding:5px 10px;
-  border-radius:20px;
-  font-weight:600;
-}
-.badge.warning{background:#dc3545;color:#fff;}
-.read-more{
-  display:inline-block;
-  margin-top:10px;
-  font-weight:600;
-  color:#0a4dbf;
 }
 
 /* ===== FOOTER ===== */
@@ -176,25 +147,6 @@ body{
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:30px;
 }
-.footer-col h3{
-  font-size:18px;
-  margin-bottom:12px;
-  border-bottom:1px solid rgba(255,255,255,.3);
-  padding-bottom:6px;
-}
-.footer-col p{
-  font-size:14px;
-  color:#e5e7eb;
-  line-height:1.6;
-}
-.footer-col a{
-  display:block;
-  color:#fff;
-  font-size:14px;
-  margin-bottom:8px;
-  text-decoration:none;
-}
-.footer-col a:hover{text-decoration:underline;}
 .footer-bottom{
   margin-top:25px;
   padding-top:12px;
@@ -217,87 +169,72 @@ body{
   align-items:center;
   justify-content:center;
   z-index:9999;
-  box-shadow:0 0 0 rgba(37,211,102,.6);
   animation:whatsapp-pulse 2s infinite;
 }
-.whatsapp-icon{width:32px;height:32px;}
 @keyframes whatsapp-pulse{
   0%{box-shadow:0 0 0 0 rgba(37,211,102,.6);}
   70%{box-shadow:0 0 0 18px rgba(37,211,102,0);}
   100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
-/* Mobile safety */
 @media(max-width:768px){
   .whatsapp-float{animation:none;}
+}
+
 /* =========================
-   NOTICE BAR – IMMEDIATE VISIBILITY FIX
+   NOTICE BAR (CLEAN & STABLE)
    ========================= */
 
-.latest-updates {
-  background: #8b0000;
-  color: #ffffff;
-  overflow: hidden;
-  white-space: nowrap;
-  border-bottom: 2px solid #600000;
-  height: 44px; /* Fixed height to prevent layout shift */
-  position: relative;
+.latest-updates{
+  background:#8b0000;
+  color:#fff;
+  overflow:hidden;
+  white-space:nowrap;
+  border-bottom:2px solid #600000;
+  height:44px;
 }
 
-.ticker-wrap {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
+.ticker-wrap{
+  width:100%;
+  height:100%;
+  overflow:hidden;
 }
 
-/* Default loading text - shows immediately */
-.default-text {
-  color: #ffd900;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 10px 28px;
-  white-space: nowrap;
-  display: inline-block;
-  line-height: 24px;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
+.default-text{
+  color:#ffd700;
+  font-size:14px;
+  font-weight:600;
+  padding:10px 28px;
+  line-height:24px;
+  white-space:nowrap;
 }
 
-/* Ticker - hidden by default */
-.ticker {
-  display: none; /* Hidden until JS loads */
-  align-items: center;
-  white-space: nowrap;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  will-change: transform;
+.ticker{
+  display:inline-flex;
+  align-items:center;
+  white-space:nowrap;
+  height:100%;
 }
 
-/* When JS loads content */
-.ticker.loaded {
-  display: inline-flex;
+.ticker.run{
+  animation:noticeScroll 90s linear infinite;
 }
 
-/* links */
-.ticker a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 10px 28px;
-  white-space: nowrap;
-  display: inline-block;
-  line-height: 24px;
+.ticker a{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  padding:10px 28px;
+  white-space:nowrap;
 }
 
-/* separator */
-.sep {
-  color: #ffd900;
-  font-weight: bold;
-  padding: 0 5px;
+.sep{
+  color:#ffd700;
+  font-weight:bold;
+  padding:0 6px;
 }
+
+@keyframes noticeScroll{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-240%);}
+  }

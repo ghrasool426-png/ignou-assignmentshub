@@ -9,17 +9,14 @@ content="tt2DCaJPrjzygTtnz-OJwPlnLdYSV7E1e0kEW38NgV4" />
 
 <!-- SEO -->
 <title>IGNOU Assignment Guidance & Academic Support (Free) | IGNOU Assignments Hub</title>
-
 <meta name="description"
 content="IGNOU Assignments Hub is an independent educational guidance platform helping IGNOU students understand assignment format, answer writing, submission rules, evaluation pattern and academic best practices.">
-
 <meta name="keywords"
 content="IGNOU assignment guidance, IGNOU assignment format, IGNOU academic help, IGNOU news updates, IGNOU admissions">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0a3d62">
 <link rel="canonical" href="https://ignouassignmentshub.com/">
-
 <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 
@@ -32,9 +29,30 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.9;background:
 .nav-logo{font-weight:bold;font-size:18px}
 .nav-links{display:flex;gap:18px;align-items:center}
 .nav-links a{color:#fff;text-decoration:none}
+.dropdown{position:relative}
+.dropdown-content{display:none;position:absolute;background:#fff;top:28px;min-width:160px;box-shadow:0 5px 15px rgba(0,0,0,.15)}
+.dropdown-content a{color:#000;padding:10px;display:block;text-decoration:none}
+.dropdown:hover .dropdown-content{display:block}
+.hamburger{display:none;font-size:24px;cursor:pointer}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:55px;left:0;background:#0a3d62;width:100%;flex-direction:column;padding:15px}
+  .nav-links.show{display:flex}
+  .hamburger{display:block}
+}
 
 /* HERO */
 .hero-header{background:linear-gradient(135deg,#0a3d62,#1e5fa3);padding:90px 20px}
+.hero-content{text-align:center;color:#fff;max-width:900px;margin:auto}
+.hero-content h1{font-size:2.6rem;margin-bottom:15px}
+.hero-content p{font-size:1.15rem}
+.hero-btn{background:#ffcc00;color:#000;padding:12px 24px;border-radius:6px;font-weight:bold;text-decoration:none;display:inline-block;margin-top:20px}
+
+/* CARDS */
+.program-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{border:1px solid #ddd;padding:20px;border-radius:8px;text-decoration:none;color:#000;background:#fff}
+.card:hover{background:#eef4fb}
+section{margin-bottom:45px}
+h2{color:#0a3d62;margin-bottom:12px}
 
 /* NOTICE BAR */
 .latest-updates{
@@ -44,38 +62,35 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.9;background:
   white-space:nowrap;
   border-bottom:2px solid #600000;
 }
-
 .ticker-wrap{width:100%;overflow:hidden}
-
 .ticker{
   display:inline-flex;
   align-items:center;
-  animation:tickerMove 90s linear infinite; /* 🔥 SLOW */
+  animation:tickerMove 90s linear infinite; /* SLOW */
 }
-
 .ticker a{
   color:#fff;
   text-decoration:none;
   font-size:14px;
   font-weight:600;
-  padding:10px 30px;
+  padding:10px 25px;
   white-space:nowrap;
 }
-
 .sep{color:#ffd700;font-weight:bold}
 
-/* DEFAULT TEXT (BLANK FIX) */
+/* default text = blank fix */
 .default-text{
   color:#ffd700;
   font-size:14px;
   font-weight:600;
-  padding:10px 30px;
+  padding:10px 25px;
   white-space:nowrap;
 }
 
+/* slower distance */
 @keyframes tickerMove{
-  0%{transform:translateX(130%);}
-  100%{transform:translateX(-260%);}
+  0%{transform:translateX(120%);}
+  100%{transform:translateX(-240%);}
 }
 </style>
 </head>
@@ -85,15 +100,32 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.9;background:
 <!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-logo">IGNOU Assignments Hub</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="nav-links" id="navMenu">
+    <a href="/">Home</a>
+    <div class="dropdown">
+      <a href="#">Assignments ▾</a>
+      <div class="dropdown-content">
+        <a href="/ma/">MA</a>
+        <a href="/ba/">BA</a>
+        <a href="/bsc/">BSc</a>
+        <a href="/bba/">BBA</a>
+        <a href="/msc/">MSc</a>
+      </div>
+    </div>
+    <a href="/blog.html">Blog</a>
+    <a href="/news/">News</a>
+    <a href="/study-material/">Study Material</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </div>
 </nav>
 
-<!-- 🔴 NOTICE BAR (NO BLANK NOW) -->
+<!-- NOTICE BAR (NO BLANK) -->
 <div class="latest-updates" id="noticeBar">
   <div class="ticker-wrap">
     <div class="ticker" id="noticeTicker">
-      <span class="default-text">
-        📢 IGNOU Official Updates loading…
-      </span>
+      <span class="default-text">📢 IGNOU Official Updates loading…</span>
     </div>
   </div>
 </div>
@@ -106,11 +138,52 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.9;background:
       A free independent platform helping IGNOU students understand
       assignment writing rules, evaluation pattern and academic structure.
     </p>
+    <a href="#programs" class="hero-btn">Explore Guidance</a>
   </div>
 </header>
 
+<main class="container">
+  <section>
+    <h2>What Is IGNOU Assignments Hub?</h2>
+    <p>
+      IGNOU Assignments Hub provides structured academic guidance for IGNOU learners,
+      including assignment rules, admission updates and official news alerts.
+    </p>
+  </section>
+
+  <section id="programs">
+    <h2>Programme-wise Academic Guidance</h2>
+    <div class="program-grid">
+      <a href="/ma/" class="card"><h3>MA Programmes</h3><p>Postgraduate guidance.</p></a>
+      <a href="/ba/" class="card"><h3>BA Programmes</h3><p>Humanities support.</p></a>
+      <a href="/bsc/" class="card"><h3>BSc Programmes</h3><p>Science clarity.</p></a>
+      <a href="/bba/" class="card"><h3>BBA Programmes</h3><p>Business & management.</p></a>
+      <a href="/msc/" class="card"><h3>MSc Programmes</h3><p>Advanced academic help.</p></a>
+      <a href="/blog.html" class="card"><h3>Academic Blog</h3><p>Admissions & guidance.</p></a>
+      <a href="/news/" class="card"><h3>IGNOU News & Updates</h3><p>Official notifications.</p></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Disclaimer</h2>
+    <p>
+      This website is not affiliated with IGNOU. Content is for educational guidance only.
+    </p>
+  </section>
+</main>
+
+<div id="footer"></div>
+
 <script>
-/* NOTICE BAR LOAD */
+/* FOOTER LOAD */
+fetch("footer.html").then(r=>r.text()).then(d=>footer.innerHTML=d);
+
+/* MOBILE MENU */
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("show");
+}
+
+/* NOTICE BAR LOAD (cache-bypass) */
 fetch('/notice.json?v=' + Date.now())
 .then(res => res.json())
 .then(data => {

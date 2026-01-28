@@ -1,4 +1,4 @@
-q<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -47,14 +47,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.9;background:
 .hero-content p{font-size:1.15rem}
 .hero-btn{background:#ffcc00;color:#000;padding:12px 24px;border-radius:6px;font-weight:bold;text-decoration:none;display:inline-block;margin-top:20px}
 
-/* CARDS */
-.program-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
-.card{border:1px solid #ddd;padding:20px;border-radius:8px;text-decoration:none;color:#000;background:#fff}
-.card:hover{background:#eef4fb}
-section{margin-bottom:45px}
-h2{color:#0a3d62;margin-bottom:12px}
-
-/* NOTICE BAR */
+/* NOTICE BAR – FINAL (NO DELAY) */
 .latest-updates{
   background:#8b0000;
   color:#fff;
@@ -62,35 +55,34 @@ h2{color:#0a3d62;margin-bottom:12px}
   white-space:nowrap;
   border-bottom:2px solid #600000;
 }
-.ticker-wrap{width:100%;overflow:hidden}
+
 .ticker{
-  display:inline-flex;
-  align-items:center;
-  animation:tickerMove 90s linear infinite; /* SLOW */
+  display:inline-block;
+  padding-left:100%;
+  animation:noticeScroll 45s linear infinite; /* slow & readable */
 }
-.ticker a{
-  color:#fff;
-  text-decoration:none;
+
+.item{
+  display:inline-block;
   font-size:14px;
   font-weight:600;
   padding:10px 25px;
-  white-space:nowrap;
 }
-.sep{color:#ffd700;font-weight:bold}
 
-/* default text = blank fix */
-.default-text{
+.item a{
   color:#ffd700;
-  font-size:14px;
-  font-weight:600;
-  padding:10px 25px;
-  white-space:nowrap;
+  text-decoration:none;
+  font-weight:700;
 }
 
-/* slower distance */
-@keyframes tickerMove{
-  0%{transform:translateX(120%);}
-  100%{transform:translateX(-240%);}
+.sep{
+  color:#ffffff;
+  font-weight:bold;
+}
+
+@keyframes noticeScroll{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-100%); }
 }
 </style>
 </head>
@@ -120,29 +112,27 @@ h2{color:#0a3d62;margin-bottom:12px}
     <a href="/contact.html">Contact</a>
   </div>
 </nav>
-  <!-- NOTICE BAR -->
+
+<!-- NOTICE BAR -->
 <div class="latest-updates">
   <div class="ticker">
     <span class="item">
-      🔴 IGNOU Official Announcement – 
+      🔴 IGNOU Official Announcement –
       <a href="https://share.google/sff52A5W2piJvhz8X" target="_blank">View</a>
     </span>
-
     <span class="sep">|</span>
-
     <span class="item">
-      📄 IGNOU Grade Card – 
+      📄 IGNOU Grade Card –
       <a href="https://gradecard.ignou.ac.in/gradecard/" target="_blank">Check</a>
     </span>
-
     <span class="sep">|</span>
-
     <span class="item">
-      📢 Term End / Revaluation Results – 
+      📢 Term End / Revaluation Results –
       <a href="https://termendresult.ignou.ac.in/login.aspx" target="_blank">Open</a>
     </span>
   </div>
 </div>
+
 <!-- HERO -->
 <header class="hero-header">
   <div class="hero-content">
@@ -155,71 +145,10 @@ h2{color:#0a3d62;margin-bottom:12px}
   </div>
 </header>
 
-<main class="container">
-  <section>
-    <h2>What Is IGNOU Assignments Hub?</h2>
-    <p>
-      IGNOU Assignments Hub provides structured academic guidance for IGNOU learners,
-      including assignment rules, admission updates and official news alerts.
-    </p>
-  </section>
-
-  <section id="programs">
-    <h2>Programme-wise Academic Guidance</h2>
-    <div class="program-grid">
-      <a href="/ma/" class="card"><h3>MA Programmes</h3><p>Postgraduate guidance.</p></a>
-      <a href="/ba/" class="card"><h3>BA Programmes</h3><p>Humanities support.</p></a>
-      <a href="/bsc/" class="card"><h3>BSc Programmes</h3><p>Science clarity.</p></a>
-      <a href="/bba/" class="card"><h3>BBA Programmes</h3><p>Business & management.</p></a>
-      <a href="/msc/" class="card"><h3>MSc Programmes</h3><p>Advanced academic help.</p></a>
-      <a href="/blog.html" class="card"><h3>Academic Blog</h3><p>Admissions & guidance.</p></a>
-      <a href="/news/" class="card"><h3>IGNOU News & Updates</h3><p>Official notifications.</p></a>
-    </div>
-  </section>
-
-  <section>
-    <h2>Disclaimer</h2>
-    <p>
-      This website is not affiliated with IGNOU. Content is for educational guidance only.
-    </p>
-  </section>
-</main>
-
-<div id="footer"></div>
-
 <script>
-/* FOOTER LOAD */
-fetch("footer.html").then(r=>r.text()).then(d=>footer.innerHTML=d);
-
-/* MOBILE MENU */
 function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("show");
 }
-
-/* NOTICE BAR LOAD (cache-bypass) */
-fetch('/notice.json?v=' + Date.now())
-.then(res => res.json())
-.then(data => {
-  if(data.status === "on"){
-    const ticker = document.getElementById("noticeTicker");
-    ticker.innerHTML = ""; // remove default text
-
-    data.notices.forEach(n => {
-      const a = document.createElement("a");
-      a.href = n.link;
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      a.textContent = n.text;
-
-      const sep = document.createElement("span");
-      sep.className = "sep";
-      sep.textContent = " | ";
-
-      ticker.appendChild(a);
-      ticker.appendChild(sep);
-    });
-  }
-});
 </script>
 
 </body>

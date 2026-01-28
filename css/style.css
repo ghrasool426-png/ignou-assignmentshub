@@ -178,32 +178,46 @@ body{
 }
 @media(max-width:768px){
   .whatsapp-float{animation:none;}
-  
-/* ===== NOTICE BAR – NO BLANK GUARANTEE ===== */
+
+  /* ===== NOTICE BAR (NO DELAY, SIMPLE) ===== */
 .latest-updates{
   background:#8b0000;
   color:#fff;
+  overflow:hidden;
+  white-space:nowrap;
   border-bottom:2px solid #600000;
 }
 
 .ticker{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:center;
+  display:inline-block;
+  padding-left:100%;
+  animation:noticeScroll 35s linear infinite; /* 👈 slow & readable */
 }
 
-.ticker a{
-  color:#fff;
+.item{
+  display:inline-block;
   font-size:14px;
   font-weight:600;
-  padding:10px 14px;
+  padding:10px 22px;
+}
+
+.item a{
+  color:#ffd700;
   text-decoration:none;
-  white-space:nowrap;
+  font-weight:700;
+}
+
+.item a:hover{
+  text-decoration:underline;
 }
 
 .sep{
-  color:#ffd700;
+  color:#ffffff;
   font-weight:bold;
-  }
+}
 
+/* slow smooth scroll */
+@keyframes noticeScroll{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-100%); }
+}

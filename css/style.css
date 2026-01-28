@@ -179,7 +179,6 @@ body{
 @media(max-width:768px){
   .whatsapp-float{animation:none;}
   
-
 /* ===== NOTICE BAR – NO BLANK GUARANTEE ===== */
 .latest-updates{
   background:#8b0000;
@@ -206,4 +205,5 @@ body{
 .sep{
   color:#ffd700;
   font-weight:bold;
-}
+  }
+

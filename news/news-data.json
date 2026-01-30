@@ -2,7 +2,7 @@
   {
     "id": 8,
     "hero": true,
-    "title": "ignou-bed-admission-january-2026",
+    "title": "IGNOU B.Ed Admission January 2026",
     "description": "IGNOU has announced admission to the Bachelor of Education (B.Ed.) programme for the January 2026 session through an all-India entrance test. Check eligibility, admission process and important dates.",
     "url": "/news/ignou-bed-admission-january-2026.html",
     "date": "2026-01-29",
@@ -33,6 +33,15 @@
     "status": "New"
   },
   {
+    "id": 4,
+    "hero": false,
+    "title": "IGNOU Launches New Skill-Based Courses for 2026 Admissions",
+    "description": "IGNOU has announced several new job-oriented and skill-based courses for students enrolling in the 2026 academic cycle.",
+    "url": "/news/ignou-new-skill-courses-2026.html",
+    "date": "2026-02-01",
+    "category": "IGNOU Update"
+  },
+  {
     "id": 1,
     "hero": false,
     "title": "IGNOU Extends Re-Registration Deadline for January 2026 Session",
@@ -58,14 +67,5 @@
     "url": "/news/president-murmu-inaugurates-ignou-skill-centre-odisha.html",
     "date": "2026-01-02",
     "category": "IGNOU News"
-  },
-  {
-    "id": 4,
-    "hero": false,
-    "title": "IGNOU Launches New Skill-Based Courses for 2026 Admissions",
-    "description": "IGNOU has announced several new job-oriented and skill-based courses for students enrolling in the 2026 academic cycle.",
-    "url": "/news/ignou-new-skill-courses-2026.html",
-    "date": "2026-02-01",
-    "category": "IGNOU Update"
   }
 ]

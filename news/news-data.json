@@ -1,5 +1,16 @@
 [
   {
+    "id": 7,
+    "hero": true,
+    "title": "IGNOU Launches B.Sc Fabric and Apparel Design Programme Under FYUGP 2026",
+    "description": "IGNOU has launched a new B.Sc Fabric and Apparel Design programme under the Four-Year Undergraduate Programme (FYUGP) starting from the January 2026 admission cycle.",
+    "url": "/news/ignou-bsc-fabric-and-apparel-design-fyugp-2026.html",
+    "date": "2026-01-29",
+    "category": "Education Update",
+    "tag": "FYUGP",
+    "status": "New"
+  },
+  {
     "id": 6,
     "hero": false,
     "title": "IGNOU Campus Placement Drive 2026 (Job Fair)",
@@ -12,7 +23,7 @@
   },
   {
     "id": 1,
-    "hero": true,
+    "hero": false,
     "title": "IGNOU Extends Re-Registration Deadline for January 2026 Session",
     "description": "IGNOU has officially extended the re-registration deadline for all ODL and Online programmes for the January 2026 session until 31 January 2026.",
     "url": "/news/ignou-re-registration-deadline-extended-january-2026.html",

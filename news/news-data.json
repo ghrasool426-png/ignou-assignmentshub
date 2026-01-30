@@ -1,7 +1,18 @@
 [
   {
-    "id": 7,
+    "id": 8,
     "hero": true,
+    "title": "IGNOU B.Ed Admission January 2026",
+    "description": "IGNOU has announced admission to the Bachelor of Education (B.Ed.) programme for the January 2026 session through an all-India entrance test. Check eligibility, admission process and important dates.",
+    "url": "/ignou-bed-admission-january-2026.html",
+    "date": "2026-01-29",
+    "category": "Admission",
+    "tag": "B.Ed",
+    "status": "New"
+  },
+  {
+    "id": 7,
+    "hero": false,
     "title": "IGNOU Launches B.Sc Fabric and Apparel Design Programme Under FYUGP 2026",
     "description": "IGNOU has launched a new B.Sc Fabric and Apparel Design programme under the Four-Year Undergraduate Programme (FYUGP) starting from the January 2026 admission cycle.",
     "url": "/news/ignou-bsc-fabric-and-apparel-design-fyugp-2026.html",

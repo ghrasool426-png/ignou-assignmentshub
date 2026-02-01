@@ -191,7 +191,7 @@ body{
 .ticker{
   display:inline-block;
   transform: translateX(100%); /* 👈 pehle pura text visible */
-  animation: noticeScroll 15s linear infinite; /* 👈 speed thodi tez */
+  animation: noticeScroll 10s linear infinite; /* 👈 speed thodi tez */
 }
 
 .item{

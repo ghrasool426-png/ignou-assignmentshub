@@ -179,7 +179,7 @@ body{
 @media(max-width:768px){
   .whatsapp-float{animation:none;}
 
-  /* ===== NOTICE BAR (NO DELAY, SIMPLE) ===== */
+ /* ===== NOTICE BAR (VISIBLE FIRST, THEN MOVE) ===== */
 .latest-updates{
   background:#8b0000;
   color:#fff;
@@ -190,8 +190,8 @@ body{
 
 .ticker{
   display:inline-block;
-  padding-left:50%;
-  animation:noticeScroll 20s linear infinite; /* 👈 slow & readable */
+  transform: translateX(100%); /* 👈 pehle pura text visible */
+  animation: noticeScroll 15s linear infinite; /* 👈 speed thodi tez */
 }
 
 .item{
@@ -216,8 +216,12 @@ body{
   font-weight:bold;
 }
 
-/* slow smooth scroll */
+/* smooth readable scroll */
 @keyframes noticeScroll{
-  from{ transform:translateX(0); }
-  to{ transform:translateX(-100%); }
+  from{
+    transform: translateX(100%);
+  }
+  to{
+    transform: translateX(-100%);
+  }
 }

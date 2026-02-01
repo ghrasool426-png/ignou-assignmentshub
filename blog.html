@@ -91,22 +91,22 @@ box-shadow:0 4px 10px rgba(0,0,0,.3);z-index:9999
 <div class="hamburger" onclick="toggleMenu()">☰</div>
 
 <div class="nav-links" id="navMenu">
-<a href="index.html">Home</a>
+<a href="/index.html">Home</a>
 <div class="dropdown">
 <a href="#">Assignments ▾</a>
 <div class="dropdown-content">
-<a href="ma.html">MA</a>
-<a href="ba.html">BA</a>
-<a href="bsc.html">BSc</a>
-<a href="bba.html">BBA</a>
-<a href="msc.html">MSc</a>
+<a href="/ma.html">MA</a>
+<a href="/ba.html">BA</a>
+<a href="/bsc.html">BSc</a>
+<a href="/bba.html">BBA</a>
+<a href="/msc.html">MSc</a>
 </div>
 </div>
-<a href="blog.html">Blog</a>
-<a href="news/index.html">News</a>
-<a href="ignou-study-material.html">Study Material</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+<a href="/blog.html">Blog</a>
+<a href="/news/index.html">News</a>
+<a href="/ignou-study-material.html">Study Material</a>
+<a href="/about.html">About</a>
+<a href="/contact.html">Contact</a>
 </div>
 </nav>
 
@@ -124,8 +124,10 @@ Here you will find verified guidance on IGNOU admissions, assignment rules,
 scholarships and common student problems.
 </p>
 
+<!-- BLOG CARDS -->
 <div class="blog-grid">
-<a href="blog/ignou-bed-entrance-exam-pattern-syllabus-2026.html" class="blog-card">
+
+<a href="/Blog/ignou-bed-entrance-exam-pattern-syllabus-2026.html" class="blog-card">
   <span class="badge">B.Ed Entrance</span>
   <h3>IGNOU B.Ed Entrance Test 2026: Exam Pattern & Syllabus</h3>
   <p>
@@ -134,50 +136,50 @@ scholarships and common student problems.
   </p>
   <span class="read-more">Read Full Guide →</span>
 </a>
-  
-<a href="blog/ignou-scholarship-2026-sc-st-fee-waiver.html" class="blog-card">
+
+<a href="/Blog/ignou-scholarship-2026-sc-st-fee-waiver.html" class="blog-card">
 <span class="badge">Official</span>
 <h3>IGNOU Scholarship 2026 for SC/ST – Fee Waiver Scheme</h3>
 <p>Eligibility, income limit and application process explained.</p>
 <span class="read-more">Read Full Details →</span>
 </a>
 
-<a href="blog/ignou-online-programmes-admission-january-2026.html" class="blog-card">
+<a href="/Blog/ignou-online-programmes-admission-january-2026.html" class="blog-card">
 <span class="badge">Admission</span>
 <h3>IGNOU Online Programmes Admission January 2026</h3>
 <p>Eligibility, last date & application process.</p>
 <span class="read-more">Read →</span>
 </a>
 
-<a href="blog/ignou-admission-status-check.html" class="blog-card">
+<a href="/Blog/ignou-admission-status-check.html" class="blog-card">
 <span class="badge">Admission</span>
 <h3>IGNOU Admission Status 2026 – Confirmed or Pending?</h3>
 <p>How to check status and fix pending issues.</p>
 <span class="read-more">Read Full Guide →</span>
 </a>
 
-<a href="blog/why-ignou-admission-gets-cancelled.html" class="blog-card">
+<a href="/Blog/why-ignou-admission-gets-cancelled.html" class="blog-card">
 <span class="badge">Admission</span>
 <h3>Why IGNOU Admission Gets Cancelled?</h3>
 <p>Top reasons and official solutions.</p>
 <span class="read-more">Read Full Guide →</span>
 </a>
 
-<a href="blog/ignou-assignment-recheck-re-evaluation.html" class="blog-card">
+<a href="/Blog/ignou-assignment-recheck-re-evaluation.html" class="blog-card">
 <span class="badge">IGNOU Rules</span>
 <h3>IGNOU Assignment Re-check / Re-evaluation</h3>
 <p>Official process explained clearly.</p>
 <span class="read-more">Read Full Guide →</span>
 </a>
 
-<a href="blog/assignment-marks-not-updated.html" class="blog-card">
+<a href="/Blog/assignment-marks-not-updated.html" class="blog-card">
 <span class="badge">IGNOU Help</span>
 <h3>IGNOU Assignment Marks Not Updated?</h3>
 <p>Study centre & RTI based solution.</p>
 <span class="read-more">Read →</span>
 </a>
 
-<a href="blog/ignou-re-registration-january-2026.html" class="blog-card">
+<a href="/Blog/ignou-re-registration-january-2026.html" class="blog-card">
 <span class="badge">Admission</span>
 <h3>IGNOU Re-Registration January 2026</h3>
 <p>Samarth portal guide & last date.</p>
@@ -187,7 +189,7 @@ scholarships and common student problems.
 </div>
 
 <p style="margin-top:30px;">
-← <a href="index.html">Back to Home</a>
+← <a href="/index.html">Back to Home</a>
 </p>
 
 </main>
@@ -195,7 +197,7 @@ scholarships and common student problems.
 <!-- FOOTER -->
 <div id="footer"></div>
 <script>
-fetch("footer.html")
+fetch("/footer.html")
 .then(r=>r.text())
 .then(d=>document.getElementById("footer").innerHTML=d);
 </script>
